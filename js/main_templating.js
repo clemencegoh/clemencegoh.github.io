@@ -44,5 +44,7 @@ function generateProjects(){
     console.log('completed creating of projects');
 }   
 
-// everything that should be done on load
-(generateProjects)();
+$( document ).ready(function() {
+    console.log( "ready!" );
+    generateProjects();
+});
