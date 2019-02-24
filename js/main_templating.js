@@ -1,15 +1,20 @@
-function generateProjects(){
+function getProjectsData() {
+	// add accordingly, array of json data
+	let projectsData = [
+		{
+			Description: "Social media prototype",
+			Category: "website",
+			Link: "http://mixriev.herokuapp.com/",
+			Preview: "img/mixriev_preview.JPG",
+			PrivateName: "Mixriev"
+		},
+	];
+	return projectsData;
+}
 
-    // add accordingly, array of json data
-    let projectsData = [
-        {
-            Description: "Social media prototype",
-            Category: "website",
-            Link: "http://mixriev.herokuapp.com/",
-            Preview: "img/mixriev_preview.JPG",
-            PrivateName: "Mixriev"
-        },
-    ];
+
+function generateProjects(){
+    let projectsData = getProjectsData();
 
     // init areas
     let projectsArea = document.getElementById("projects_content");
@@ -42,9 +47,4 @@ function generateProjects(){
     }
 
     console.log('completed creating of projects');
-}   
-
-$( document ).ready(function() {
-    console.log( "ready!" );
-    generateProjects();
-});
+}

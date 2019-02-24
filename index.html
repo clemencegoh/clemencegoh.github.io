@@ -21,8 +21,9 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/bootstrap.css">			
-		<link rel="stylesheet" href="css/main.css">
-	
+		<link rel="stylesheet" href="css/main.css">			
+		<link rel="stylesheet" href="css/navbar.css">
+
 		<!-- templates here -->
 		<template id="projects_area">
 			<div class="single-portfolio col-sm-4 all website" id="filter_fields">
@@ -49,34 +50,52 @@
 		<script src="js/vendor/bootstrap.min.js"></script>
 		<script src="js/main_templating.js"></script>
 		<script src="js/main_helpers.js"></script>
+		<script>
+			// functions to be called immediately after html ready
+			$( document ).ready(function() {
+				navbarToggler("myTopnav", "nav-btn");
+				projectsFilterToggler('project-filters', 'proj-filter-item');
+				generateProjects();
+			});
+		</script>
 	
 	</head>
 	<body>	
 		<div class="topnav" id="myTopnav">
-			<a href="#home" class="active">Home</a>
-			<a href="#about">About</a>
-			<a href="#skills">Skills</a>
-			<a href="#portfolio">Portfolio</a>
-			<a href="#resume">Resume</a>
-			<div class="dropdown">
-			  	<button class="dropbtn" onclick="blogDropdown()">Blog 
-					<i class="fa fa-caret-down"></i>
-			  	</button>
-			  	<div class="dropdown-content" id="blog-dropdown-content">
-					<a href="#">Blog Home</a>
-					<a href="#">Projects</a>
-					<a href="#">Academics</a>
-			  	</div>
-			</div> 
+			<a href="#" id="navbar-home" class="nav-btn active">Home</a>
+			<a href="#" id="navbar-about" class="nav-btn ">About</a>
+			<a href="#" id="navbar-skills" class="nav-btn ">Skills</a>
+			<a href="#" id="navbar-portfolio" class="nav-btn ">Portfolio</a>
+			<a href="#" id="navbar-resume" class="nav-btn ">Resume</a>
+			<!-- Blog under maintenance -->
+			<!--<div class="dropdown">-->
+			  	<!--<button class="dropbtn" onclick="blogDropdown()">Blog -->
+					<!--<i class="fa fa-caret-down"></i>-->
+			  	<!--</button>-->
+			  	<!--<div class="dropdown-content" id="blog-dropdown-content">-->
+					<!--<a href="#">Blog Home</a>-->
+					<!--<a href="#">Projects</a>-->
+					<!--<a href="#">Academics</a>-->
+			  	<!--</div>-->
+			<!--</div> -->
 			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="navbarFunction()">&#9776;</a>
 		</div>
 
-			
+		<!-- Main feature area -->
+		<div class="main-feature-area" id="main-feature">
+			<div class="mini-about" id="mini-about">
+				<h1>Clemence Goh</h1>
+				<p>Software engineer</p>
+			</div>
+			<div class="feature-pic" id="feature-pic">
+				<img class="main_profile_img" src="./img/cropped_clemence.JPG">
+			</div>
+		</div>
 
 		<!-- Start portfolio-area Area -->
-		<section class="portfolio-area section-gap" id="portfolio">
+		<div class="portfolio-area section-gap" id="portfolio">
 			<div class="container">
-				<div class="row d-flex justify-content-center">
+				<div class="row d-flex projects-header">
 					<div class="menu-content pb-70 col-lg-8">
 						<div class="title text-center">
 							<h1 class="mb-10">Projects</h1>
@@ -86,14 +105,14 @@
 				</div>
 				
 				<!-- Projects overall area -->
-				<div class="filters">
-					<ul>
-						<li class="active" data-filter="*">All</li>
-						<li data-filter=".app">App</li>
-						<li data-filter=".school">School</li>
-						<li data-filter=".website">Website</li>
-						<li data-filter=".software">Software</li>
-					</ul>
+				<div class="filters" id="project-filters">
+					<div class="filter-headings">
+						<span class="proj-filter-item active" data-filter="*">All</span>
+						<span class="proj-filter-item" data-filter=".app">App</span>
+						<span class="proj-filter-item" data-filter=".school">School</span>
+						<span class="proj-filter-item" data-filter=".website">Website</span>
+						<span class="proj-filter-item" data-filter=".software">Software</span>
+					</div>
 				</div>
 				
 				<!-- Projects area -->
@@ -105,7 +124,7 @@
 				</div>
 				
 			</div>
-		</section>
+		</div>
 		<!-- End portfolio-area Area -->	
 		
 	</body>
