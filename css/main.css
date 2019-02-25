@@ -11,7 +11,7 @@
 	max-width: 100%;
 }
 
-.mini-about{
+.introduction{
 	margin: auto;
 	display: flex;
 	flex-flow: column;
@@ -58,5 +58,11 @@
 
 .proj-title{
 	text-align: center;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
 }
 

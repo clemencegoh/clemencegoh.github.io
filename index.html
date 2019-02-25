@@ -61,12 +61,22 @@
 	
 	</head>
 	<body>	
-		<div class="topnav" id="myTopnav">
-			<a href="#" id="navbar-home" class="nav-btn active">Home</a>
-			<a href="#" id="navbar-about" class="nav-btn ">About</a>
-			<a href="#" id="navbar-skills" class="nav-btn ">Skills</a>
-			<a href="#" id="navbar-portfolio" class="nav-btn ">Portfolio</a>
-			<a href="#" id="navbar-resume" class="nav-btn ">Resume</a>
+		<div class="topnav sticky" id="myTopnav">
+			<a href="#Home" id="navbar-home"
+			   class="nav-btn active"
+			   onclick="goto_Section('Home')">Home</a>
+			<a href="#About" id="navbar-about"
+			   class="nav-btn"
+			   onclick="goto_Section('About')">About</a>
+			<a href="#Portfolio" id="navbar-portfolio"
+			   class="nav-btn"
+			   onclick="goto_Section('Portfolio')">Portfolio</a>
+			<a href="#Skills" id="navbar-skills"
+			   class="nav-btn"
+			   onclick="goto_Section('Skills')">Skills</a>
+			<a href="#Resume" id="navbar-resume"
+			   class="nav-btn"
+			   onclick="goto_Section('Resume')">Resume</a>
 			<!-- Blog under maintenance -->
 			<!--<div class="dropdown">-->
 			  	<!--<button class="dropbtn" onclick="blogDropdown()">Blog -->
@@ -82,18 +92,29 @@
 		</div>
 
 		<!-- Main feature area -->
-		<div class="main-feature-area" id="main-feature">
-			<div class="mini-about" id="mini-about">
+		<div class="main-feature-area Home" id="main-feature">
+			<div class="introduction" id="introduction">
+				<p>Hi, my name is:</p>
 				<h1>Clemence Goh</h1>
-				<p>Software engineer</p>
 			</div>
 			<div class="feature-pic" id="feature-pic">
 				<img class="main_profile_img" src="./img/cropped_clemence.JPG">
 			</div>
 		</div>
 
+		<!-- About area -->
+		<div class="main-feature-area mini-about-area About" id="mini-about-area">
+			<div class="about-pic">
+				<img class="mini-about-img" src="">
+			</div>
+			<div class="mini-about-text" id="mini-about-text">
+				<p>Software Engineer</p>
+				<p>Web Developer</p>
+			</div>
+		</div>
+
 		<!-- Start portfolio-area Area -->
-		<div class="portfolio-area section-gap" id="portfolio">
+		<div class="portfolio-area section-gap Portfolio" id="portfolio-area">
 			<div class="container">
 				<div class="row d-flex projects-header">
 					<div class="menu-content pb-70 col-lg-8">
@@ -128,13 +149,13 @@
 		<!-- End portfolio-area Area -->
 
 		<!-- Start Skills area -->
-		<div>
+		<div class="Skills" id="Skills">
 
 		</div>
 		<!-- End skills area -->
 
-		<!-- Start About area -->
-		<div>
+		<!-- Start Resume area -->
+		<div class="Resume" id="Resume">
 
 		</div>
 		<!-- End About area -->

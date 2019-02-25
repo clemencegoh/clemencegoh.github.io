@@ -47,4 +47,8 @@ function projectsFilterToggler(header_name, selections_name) {
 	}
 }
 
+function goto_Section(section) {
+	window.scrollTo(0, document.getElementsByClassName(section)[0].offsetTop);
+}
+
 
