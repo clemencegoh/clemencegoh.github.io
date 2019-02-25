@@ -50,6 +50,13 @@
 
 .portfolio-area{
 	background: lightslategray;
+}
 
+.cat{
+	text-align: center;
+}
+
+.proj-title{
+	text-align: center;
 }
 
