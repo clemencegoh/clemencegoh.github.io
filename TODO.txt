@@ -1,0 +1,4 @@
+Fix filter feature
+Redesign portfolio to show a mini about with description about:
+- Tech/Language used
+- What it does

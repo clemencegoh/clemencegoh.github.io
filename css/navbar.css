@@ -17,7 +17,7 @@ body {
   font-size: 17px;
 }
 
-.active {
+.navactive {
   background-color: black;
   color: white;
 }
@@ -103,4 +103,9 @@ body {
     width: 100%;
     text-align: left;
   }
+}
+
+.active{
+  color: white;
+  background: black;
 }

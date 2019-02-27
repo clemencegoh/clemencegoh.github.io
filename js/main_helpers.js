@@ -1,5 +1,5 @@
 function navbarFunction() {
-    var x = document.getElementById("myTopnav");
+    let x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
         x.className += " responsive";
     } else {
@@ -21,21 +21,22 @@ function navbarToggler(header_name, selections_name) {
 	}
 }
 
-// todo: filter here through the projects
+
 function projectsFilterToggler(header_name, selections_name) {
+	let projects_area = document.getElementById('projects_content');
 	let header = document.getElementById(header_name);
 	let btns = header.getElementsByClassName(selections_name);
-	let filter_area = document.getElementById('portfolio');
 
 	for (let i = 0; i < btns.length; i++) {
+		// Add function to click
 		btns[i].addEventListener("click", function() {
 			// sets this to active while the rest to not active
 			let current = header.getElementsByClassName("active");
 			current[0].className = current[0].className.replace(" active", "");
 			this.className += " active";
-
 			let filtering_for = this.innerText.toLowerCase();
-			let to_filter = filter_area.getElementsByClassName('all');
+			let to_filter = projects_area.getElementsByClassName('all');
+
 			for (let j=0;j<to_filter.length;j++){
 				if (!to_filter[j].className.includes(filtering_for)){
 					to_filter[j].setAttribute('hidden', true);
