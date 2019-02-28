@@ -85,7 +85,7 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {position: absolute;}
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -97,7 +97,7 @@ body {
     text-align: left;
   }
   .topnav.responsive .dropdown {float: none;}
-  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown-content {position: absolute;}
   .topnav.responsive .dropdown .dropbtn {
     display: block;
     width: 100%;
