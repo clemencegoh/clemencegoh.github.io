@@ -1,10 +1,11 @@
-.main-feature-area{
+.About{
 	display: flex;
 	justify-content: center;
 	justify-items: center;
 	align-items: center;
 	align-content: center;
 	flex-wrap: wrap;
+	min-height: 100vh;
 }
 
 .main_profile_img{
@@ -70,6 +71,7 @@
 .Home{
 	margin: auto;
 	padding: 11rem 0;
+	height: 100vh;
 }
 
 .w-container{
@@ -83,4 +85,13 @@
 	-moz-border-radius: 50%;
 	border-radius: 50%;
 	height: 18vh;
+}
+
+.Portfolio{
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.Skills{
 }
