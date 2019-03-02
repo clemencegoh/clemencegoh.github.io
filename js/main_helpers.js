@@ -1,10 +1,16 @@
+
 function navbarFunction() {
     let x = document.getElementById("myTopnav");
     if (x.className === "topnav sticky") {
         x.className += " responsive";
     } else {
-        x.className = "topnav sticky";
+	    x.className = "topnav sticky";
     }
+}
+
+function removeResponsive() {
+	let x = document.getElementById("myTopnav");
+	x.className = "topnav sticky";
 }
 
 // Toggler functions for enabling changes to happen on click
@@ -17,6 +23,7 @@ function navbarToggler(header_name, selections_name) {
 			let current = header.getElementsByClassName("active");
 			current[0].className = current[0].className.replace(" active", "");
 			this.className += " active";
+			removeResponsive();
 		});
 	}
 }
