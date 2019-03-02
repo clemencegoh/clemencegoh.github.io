@@ -94,6 +94,10 @@
 	align-items: center;
 }
 
+.single-portfolio{
+	padding: 1rem;
+}
+
 .section-description{
 	text-align: center;
 }
