@@ -69,3 +69,124 @@ function generateProjects(){
 
     console.log('completed creating of projects');
 }
+
+function getSkillsData(){
+	let skills1 = [
+		{
+			Name: "Python",
+			Time_Start: new Date(2017, 0),
+			Projects: 7,
+			Proficiency: "Advanced",
+		},
+		{
+			Name: "Golang",
+			Time_Start: new Date(2017, 4),
+			Projects: 3,
+			Proficiency: "Intermediate",
+		},
+		{
+			Name: "Java",
+			Time_Start: new Date(2017, 8),
+			Projects: 2,
+			Proficiency: "Intermediate",
+		},
+		{
+			Name: "Blockchain",
+			Time_Start: new Date(2018, 8),
+			Projects: 1,
+			Proficiency: "Basic",
+		},
+		{
+			Name: "Android",
+			Time_Start: new Date(2017, 8),
+			Projects: 1,
+			Proficiency: "Basic",
+		},
+	];
+
+	let skills2 = [
+		{
+			Name: "Javascript",
+			Time_Start: new Date(2018, 4),
+			Projects: 4,
+			Proficiency: "Novice"
+		},
+		{
+			Name: "HTML/CSS",
+			Time_Start: new Date(2018, 4),
+			Projects: 3,
+			Proficiency: "Novice"
+		},
+		{
+			Name: "Reactjs",
+			Time_Start: new Date(2018, 4),
+			Projects: 1,
+			Proficiency: "Basic",
+		},
+		{
+			Name: "AI",
+			Time_Start: new Date(2018, 8),
+			Projects: 2,
+			Proficiency: "Basic",
+		}
+	];
+
+	return [skills1, skills2]
+}
+
+function timeSince(date) {
+	let d = new Date();
+	let year = d.getFullYear() - date.getFullYear();
+	let month_now = d.getMonth();
+	let month_then = date.getMonth();
+	let month = '';
+	if (month_now < month_then){
+		month = month_now + 12 - month_then;
+	}else{
+		month = month_now - month_then;
+	}
+	return year + " years " + month + " months, ";
+}
+
+function generateSkills(){
+	let data = getSkillsData();
+
+	// init areas
+	let skills_templ = document.getElementsByTagName("template")[1];
+
+	// clear area
+	let area1 = document.getElementById("skills-area1");
+	let area2 = document.getElementById("skills-area2");
+	area1.textContent = '';
+	area2.textContent = '';
+
+	// init template pointers
+	let name = skills_templ.content.getElementById("skill-desc");
+	let details = skills_templ.content.getElementById("skill-details");
+	let proficiency = skills_templ.content.getElementById("skill-proficiency");
+
+	for (let i=0;i<data.length;i++){
+		for (let j=0;j<data[i].length;j++){
+			let d = data[i][j];
+
+			console.log('doing for data:', d);
+
+			name.innerText = d.Name;
+			details.innerText = timeSince(d.Time_Start) + d.Projects + " Projects";
+			proficiency.setAttribute('class', 'single-skill ' + d.Proficiency);
+			proficiency.innerText = d.Proficiency;
+
+			// clone
+			let skills_node = skills_templ.content.cloneNode(true);
+
+			if (i===0){
+				area1.appendChild(skills_node);
+			}else{
+				area2.appendChild(skills_node);
+			}
+
+		}
+	}
+
+	console.log('completed creating of skills');
+}

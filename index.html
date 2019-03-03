@@ -23,6 +23,7 @@
 		<link rel="stylesheet" href="css/bootstrap.css">			
 		<link rel="stylesheet" href="css/main.css">			
 		<link rel="stylesheet" href="css/navbar.css">
+		<!--<link rel="stylesheet" href="css/circle.css">-->
 
 		<!-- templates here -->
 		<template id="projects_area">
@@ -43,6 +44,18 @@
 			</div>
 		</template>
 
+		<template id="skills_area">
+			<div class="single-skill-container">
+				<p class="skill-desc" id="skill-desc">Python</p>
+				<p id="skill-details">3 Years, 4 Projects</p>
+				<div class="skill-container">
+					<div class="single-skill Advanced" id="skill-proficiency">
+						Advanced
+					</div>
+				</div>
+			</div>
+		</template>
+
 		<!-- Scripts -->
 		<script src="js/vendor/jquery-2.2.4.min.js"></script>
 		<script src="js/vendor/bootstrap.min.js"></script>
@@ -54,6 +67,7 @@
 				navbarToggler("myTopnav", "nav-btn");
 				projectsFilterToggler('project-filters', 'proj-filter-item');
 				generateProjects();
+				generateSkills();
 			});
 		</script>
 	
@@ -169,80 +183,9 @@
 			<div class="skills-wrapper">
 				<div class="skills-area1" id="skills-area1">
 
-					<div class="single-skill-container">
-						<p class="skill-desc">Python</p>
-						<div class="skill-container">
-							<div class="single-skill Advanced">
-								Advanced
-							</div>
-						</div>
-					</div>
-
-					<div class="single-skill-container">
-						<p class="skill-desc">Golang</p>
-						<div class="skill-container">
-							<div class="single-skill Intermediate">
-								Intermediate
-							</div>
-						</div>
-					</div>
-
-					<div class="single-skill-container">
-						<p class="skill-desc">Java</p>
-						<div class="skill-container">
-							<div class="single-skill Intermediate">
-								Intermediate
-							</div>
-						</div>
-					</div>
-
-					<div class="single-skill-container">
-						<p class="skill-desc">Blockchain</p>
-						<div class="skill-container">
-							<div class="single-skill Basic">
-								Basic
-							</div>
-						</div>
-					</div>
-
 				</div>
+
 				<div class="skills-area2" id="skills-area2">
-
-					<div class="single-skill-container">
-						<p class="skill-desc">HTML</p>
-						<div class="skill-container">
-							<div class="single-skill Novice">
-								Novice
-							</div>
-						</div>
-					</div>
-
-					<div class="single-skill-container">
-						<p class="skill-desc">CSS</p>
-						<div class="skill-container">
-							<div class="single-skill Novice">
-								Novice
-							</div>
-						</div>
-					</div>
-
-					<div class="single-skill-container">
-						<p class="skill-desc">Javascript</p>
-						<div class="skill-container">
-							<div class="single-skill Novice">
-								Novice
-							</div>
-						</div>
-					</div>
-
-					<div class="single-skill-container">
-						<p class="skill-desc">AI</p>
-						<div class="skill-container">
-							<div class="single-skill Basic">
-								Basic
-							</div>
-						</div>
-					</div>
 
 				</div>
 			</div>
@@ -256,7 +199,7 @@
 			<div>
 				<h2>Interested to find out more?</h2>
 				<p>Download my
-					<a href="./files/clemence_resume_2019_1.pdf" download>
+					<a href="./files/clemence_cv_2019.pdf" download>
 						resume
 					</a>
 					here!

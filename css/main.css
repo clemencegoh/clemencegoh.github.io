@@ -130,11 +130,16 @@
 
 .single-skill-container{
 	padding: 1rem 0 1rem 0;
+	text-align: center;
 }
 
 .skill-desc{
 	margin: 0;
 	font-weight: bold;
+}
+
+.skill-about{
+	margin: 0;
 }
 
 .single-skill{
