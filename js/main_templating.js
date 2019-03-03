@@ -142,6 +142,7 @@ function timeSince(date) {
 	let month = '';
 	if (month_now < month_then){
 		month = month_now + 12 - month_then;
+		year -= 1;
 	}else{
 		month = month_now - month_then;
 	}
