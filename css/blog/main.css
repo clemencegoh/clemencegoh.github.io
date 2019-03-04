@@ -1,0 +1,9 @@
+.overall-blog-wrapper{
+	display: flex;
+	flex-flow: row;
+}
+
+.blog-navbar{
+	width: 2vw;
+}
+

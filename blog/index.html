@@ -1,10 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/fav.png">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
 	<meta charset="UTF-8">
-	<title>Technical Blog</title>
+	<!-- Site Title -->
+	<title>Blog & Notes</title>
+
+	<!--
+		CSS
+		============================================= -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link rel="stylesheet" href="../css/blog/main.css">
+
+
+	<!-- templates here -->
+
+
+	<!-- Javascript here -->
+	<script src="../js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="../js/vendor/bootstrap.min.js"></script>
+	<script src="../js/blog/helper.js"></script>
+	<script>
+		// functions to be called immediately after html ready
+		$( document ).ready(function() {
+			console.log('blog ready');
+		});
+	</script>
+
 </head>
 <body>
-	<h1>Welcome to my blog!</h1>
+	<div class="overall-blog-wrapper">
+		<div class="blog-navbar">
+			<a href="#" onclick="">&#9776;</a>
+		</div>
+		<div class="blog-content">
+			<h1>Welcome to my blog!</h1>
+			<h2>This page is currently in development</h2>
+			<p>This will be used as a layout to all notes taken</p>
+			<p>within my time at SUTD.</p>
+			<br/>
+			<p>It will also be used as a blogging platform</p>
+			<p>for all technical things I find useful in the future</p>
+			<a href="../">Click here to navigate back</a>
+		</div>
+	</div>
 </body>
 </html>
