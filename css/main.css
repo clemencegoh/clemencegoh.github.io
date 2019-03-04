@@ -12,6 +12,15 @@
 	max-width: 100%;
 }
 
+.scroll-more{
+	position: absolute;
+	bottom: 25vh;
+	right: 50%;
+	left: 50%;
+	display: flex;
+	justify-content: center;
+}
+
 .introduction{
 	margin: auto;
 	display: flex;
