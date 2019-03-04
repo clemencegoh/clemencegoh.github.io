@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53a857ec-6be2-4a0d-b180-ab3ad7608bc2" name="Default" comment="" />
+    <list default="true" id="53a857ec-6be2-4a0d-b180-ab3ad7608bc2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/navbar.css" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -19,8 +23,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="23">
-                  <caret line="185" column="22" selection-start-line="185" selection-start-column="22" selection-end-line="185" selection-end-column="22" />
+                <state relative-caret-position="138">
+                  <caret line="190" column="18" lean-forward="true" selection-start-line="190" selection-start-column="18" selection-end-line="190" selection-end-column="18" />
                   <folding>
                     <element signature="n#style#0;n#a#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -32,11 +36,20 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="main_templating.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="main_templating.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/main_templating.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="299">
-                  <caret line="148" column="35" lean-forward="true" selection-start-line="148" selection-start-column="35" selection-end-line="148" selection-end-column="35" />
+                <state relative-caret-position="23">
+                  <caret line="148" column="35" selection-start-line="148" selection-start-column="35" selection-end-line="148" selection-end-column="35" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="prototype.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/prototype.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="161">
+                  <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
                 </state>
               </provider>
             </entry>
@@ -50,11 +63,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+          <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3795">
-                  <caret line="165" column="7" selection-start-line="165" selection-start-column="7" selection-end-line="165" selection-end-column="7" />
+                <state relative-caret-position="215">
+                  <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
                 </state>
               </provider>
             </entry>
@@ -62,8 +75,8 @@
           <file leaf-file-name="navbar.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/navbar.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2070">
-                  <caret line="90" column="11" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
+                <state relative-caret-position="253">
+                  <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -71,6 +84,13 @@
         </leaf>
       </split-second>
     </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -104,11 +124,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/css/navbar.css" />
         <option value="$PROJECT_DIR$/js/main_helpers.js" />
-        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/main_templating.js" />
+        <option value="$PROJECT_DIR$/prototype.html" />
+        <option value="$PROJECT_DIR$/css/navbar.css" />
+        <option value="$PROJECT_DIR$/css/main.css" />
       </list>
     </option>
   </component>
@@ -132,6 +153,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,21 +161,10 @@
               <item name="clemencegoh.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="clemencegoh.github.io" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="clemencegoh.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clemencegoh.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clemencegoh.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clemencegoh.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -208,14 +219,16 @@
       <workItem from="1551530965190" duration="10797000" />
       <workItem from="1551584365699" duration="4596000" />
       <workItem from="1551599682745" duration="43000" />
+      <workItem from="1551661193295" duration="586000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38780000" />
+    <option name="totallyTimeSpent" value="39366000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12623926" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -243,13 +256,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/navbar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2070">
-          <caret line="90" column="11" lean-forward="true" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2070">
@@ -569,13 +575,6 @@
     <entry file="file://$PROJECT_DIR$/TODO.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/navbar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2070">
-          <caret line="90" column="11" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/main_helpers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -590,27 +589,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
+    <entry file="file://$PROJECT_DIR$/js/main_templating.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3795">
-          <caret line="165" column="7" selection-start-line="165" selection-start-column="7" selection-end-line="165" selection-end-column="7" />
+        <state relative-caret-position="23">
+          <caret line="148" column="35" selection-start-line="148" selection-start-column="35" selection-end-line="148" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prototype.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="185" column="22" selection-start-line="185" selection-start-column="22" selection-end-line="185" selection-end-column="22" />
+        <state relative-caret-position="138">
+          <caret line="190" column="18" lean-forward="true" selection-start-line="190" selection-start-column="18" selection-end-line="190" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#a#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main_templating.js">
+    <entry file="file://$PROJECT_DIR$/css/navbar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="148" column="35" lean-forward="true" selection-start-line="148" selection-start-column="35" selection-end-line="148" selection-end-column="35" />
+        <state relative-caret-position="253">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
         </state>
       </provider>
     </entry>
