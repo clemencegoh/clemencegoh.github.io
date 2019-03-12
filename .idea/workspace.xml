@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53a857ec-6be2-4a0d-b180-ab3ad7608bc2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/css/blog/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/zhimin/zhimin_n_me.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/blog/data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/blog/helper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/projects/data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/skills/data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zhimin/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main_templating.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main_templating.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/blog/helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/blog/helper.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,11 +21,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.52874434">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="92">
-                  <caret line="77" column="49" lean-forward="true" selection-start-line="77" selection-start-column="49" selection-end-line="77" selection-end-column="49" />
+                <state relative-caret-position="211">
+                  <caret line="206" column="18" selection-start-line="206" selection-start-column="18" selection-end-line="206" selection-end-column="18" />
                   <folding>
                     <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -40,11 +33,14 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/blog/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="27">
-                  <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+                <state relative-caret-position="1495">
+                  <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+                  <folding>
+                    <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -71,9 +67,16 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="helper.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="helper.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/blog/helper.js">
-              <provider selected="true" editor-type-id="text-editor" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="46">
+                  <caret line="2" column="61" selection-start-line="2" selection-start-column="61" selection-end-line="2" selection-end-column="61" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
             </entry>
           </file>
           <file leaf-file-name="data.js" pinned="false" current-in-tab="false">
@@ -94,11 +97,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="navbar.css" pinned="false" current-in-tab="false">
+          <file leaf-file-name="navbar.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/navbar.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="161">
-                  <caret line="7" selection-start-line="7" selection-end-line="7" />
+                <state relative-caret-position="386">
+                  <caret line="115" column="1" selection-start-line="115" selection-start-column="1" selection-end-line="115" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -151,6 +154,8 @@
       <find>p</find>
       <find>projects</find>
       <find>scroll</find>
+      <find>sc</find>
+      <find>scroll-more</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -160,7 +165,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/js/main_helpers.js" />
-        <option value="$PROJECT_DIR$/css/navbar.css" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/prototype.html" />
         <option value="$PROJECT_DIR$/prototypes.html" />
@@ -172,10 +176,11 @@
         <option value="$PROJECT_DIR$/zhimin/index.html" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/js/blog/data.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/blog/main.css" />
         <option value="$PROJECT_DIR$/js/blog/helper.js" />
         <option value="$PROJECT_DIR$/blog/index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/navbar.css" />
       </list>
     </option>
   </component>
@@ -199,6 +204,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -206,53 +212,10 @@
               <item name="clemencegoh.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="clemencegoh.github.io" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="clemencegoh.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clemencegoh.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clemencegoh.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clemencegoh.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clemencegoh.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clemencegoh.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clemencegoh.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clemencegoh.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clemencegoh.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clemencegoh.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clemencegoh.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clemencegoh.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clemencegoh.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clemencegoh.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="prototypes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clemencegoh.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clemencegoh.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="zhimin" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -264,14 +227,14 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\desktopStorage\personal_site\clemencegoh.github.io\css" />
-      <recent name="D:\desktopStorage\personal_site\clemencegoh.github.io\files" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\desktopStorage\personal_site\clemencegoh.github.io\img\zhimin" />
       <recent name="D:\desktopStorage\personal_site\clemencegoh.github.io\prototypes" />
       <recent name="D:\desktopStorage\personal_site\clemencegoh.github.io\img" />
+      <recent name="D:\desktopStorage\personal_site\clemencegoh.github.io\files" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\desktopStorage\personal_site\clemencegoh.github.io\css" />
       <recent name="D:\desktopStorage\personal_site\clemencegoh.github.io\files" />
     </key>
   </component>
@@ -315,25 +278,30 @@
       <workItem from="1551672967355" duration="480000" />
       <workItem from="1551675436872" duration="2075000" />
       <workItem from="1551685516769" duration="937000" />
-      <workItem from="1551687854412" duration="1063000" />
+      <workItem from="1551687854412" duration="1341000" />
+      <workItem from="1551949579671" duration="506000" />
+      <workItem from="1551950486475" duration="1304000" />
+      <workItem from="1552010002959" duration="323000" />
+      <workItem from="1552201276812" duration="1967000" />
+      <workItem from="1552379509695" duration="738000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45717000" />
+    <option name="totallyTimeSpent" value="50833000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12623926" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12623926" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.1411936" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.1411936" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="7" />
@@ -603,18 +571,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prototypes/prototypes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.map">
-      <provider editor-type-id="sourcemapFileViewerProvider" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-966" />
       </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main_helpers.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -659,13 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/navbar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -687,23 +641,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/prototypes/prototypes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/blog/helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="61" selection-start-line="2" selection-start-column="61" selection-end-line="2" selection-end-column="61" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1495">
+          <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="77" column="49" lean-forward="true" selection-start-line="77" selection-start-column="49" selection-end-line="77" selection-end-column="49" />
+        <state relative-caret-position="211">
+          <caret line="206" column="18" selection-start-line="206" selection-start-column="18" selection-end-line="206" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/blog/helper.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/index.html">
+    <entry file="file://$PROJECT_DIR$/css/navbar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+        <state relative-caret-position="386">
+          <caret line="115" column="1" selection-start-line="115" selection-start-column="1" selection-end-line="115" selection-end-column="1" />
         </state>
       </provider>
     </entry>

@@ -39,11 +39,22 @@
 
 </head>
 <body>
-	<div class="overall-blog-wrapper">
-		<div class="blog-navbar">
-			<a href="#" onclick="">&#9776;</a>
+	<div id="side-nav" style="">
+		<div>
+			<a href="#">Cat 1</a>
+			<div>
+				<a href="#sub">Sub cat 1</a>
+				<div>
+					<a href="#sub2">Sub cat 2</a>
+				</div>
+			</div>
 		</div>
-		<div class="blog-content">
+	</div>
+	<div class="overall-blog-wrapper" id="overall-blog-wrapper">
+		<div class="blog-navbar" id="blog-navbar">
+			<span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+		</div>
+		<div class="blog-content" id="blog-content">
 			<h1>Welcome to my blog!</h1>
 			<h2>This page is currently in development</h2>
 			<p>This will be used as a layout to all notes taken</p>
@@ -52,6 +63,8 @@
 			<p>It will also be used as a blogging platform</p>
 			<p>for all technical things I find useful in the future</p>
 			<a href="../">Click here to navigate back</a>
+			<br/>
+
 		</div>
 	</div>
 </body>
