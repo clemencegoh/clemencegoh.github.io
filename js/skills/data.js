@@ -10,7 +10,7 @@ function getSkillsData(){
 			Name: "Golang",
 			Time_Start: new Date(2017, 4),
 			Projects: 3,
-			Proficiency: "Intermediate",
+			Proficiency: "Basic",
 		},
 		{
 			Name: "Java",
@@ -48,6 +48,12 @@ function getSkillsData(){
 		{
 			Name: "Reactjs",
 			Time_Start: new Date(2018, 4),
+			Projects: 1,
+			Proficiency: "Basic",
+		},
+		{
+			Name: "Cyber Security",
+			Time_Start: new Date(2019, 1),
 			Projects: 1,
 			Proficiency: "Basic",
 		},
