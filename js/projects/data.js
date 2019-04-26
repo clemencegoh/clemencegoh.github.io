@@ -28,6 +28,13 @@ function getProjectsData() {
 			Link: "https://github.com/clemencegoh/MojoLucidWAM",
 			Preview: "img/coding_no_preview.jpg",
 			PrivateName: "Lucid Mojo Project"
+		},
+		{
+			Description: "Security Capture The Flag",
+			Category: 'school website',
+			Link: "https://github.com/clemencegoh/Security_CTF",
+			Preview: "img/ctf_example.gif",
+			PrivateName: "Security CTF Project from SUTD"
 		}
 	];
 	return projectsData;
