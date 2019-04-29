@@ -35,6 +35,13 @@ function getProjectsData() {
 			Link: "https://github.com/clemencegoh/Security_CTF",
 			Preview: "img/ctf_example.gif",
 			PrivateName: "Security CTF Project from SUTD"
+		},
+		{
+			Description: "Deep Learning Image Captioning",
+			Category: "school software",
+			Link: "https://github.com/clemencegoh/DL_Image_Captioning",
+			Preview: "img/DL_Caption_Example.gif",
+			PrivateName: "Image Captioning deep learning project in SUTD"
 		}
 	];
 	return projectsData;
