@@ -2,25 +2,11 @@ function getProjectsData() {
 	// add accordingly, array of json data
 	let projectsData = [
 		{
-			Description: "Social media prototype",
-			Category: "website",
-			Link: "http://mixriev.herokuapp.com/",
-			Preview: "img/mixriev_preview.JPG",
-			PrivateName: "Mixriev"
-		},
-		{
 			Description: "Flight Insurance Ethereum Dapp",
 			Category: "software website school",
 			Link: "https://github.com/clemencegoh/SUTD_Blockchain_50.037/tree/master/dapp",
 			Preview: "img/simple_dapp.JPG",
 			PrivateName: "Ethereum Blockchain Dapp"
-		},
-		{
-			Description: "Simple file upload webapp in Go",
-			Category: "software",
-			Link: "https://github.com/clemencegoh/GolangProjects/tree/master/WebApplication-Resume",
-			Preview: "img/coding_no_preview.jpg",
-			PrivateName: "Simple golang resume webapp"
 		},
 		{
 			Description: "Whack-a-mole game for mojo FPGA",
