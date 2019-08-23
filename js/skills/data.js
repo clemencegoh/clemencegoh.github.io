@@ -30,6 +30,12 @@ function getSkillsData(){
 			Projects: 1,
 			Proficiency: "Basic",
 		},
+		{
+			Name: "Game Design",
+			Time_Start: new Date(2019, 5),
+			Projects: 1,
+			Proficiency: "Basic",
+		},
 	];
 
 	let skills2 = [

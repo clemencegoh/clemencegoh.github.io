@@ -42,7 +42,14 @@ function getProjectsData() {
 			Link: "https://github.com/clemencegoh/DL_Image_Captioning",
 			Preview: "img/DL_Caption_Example.gif",
 			PrivateName: "Image Captioning deep learning project in SUTD"
-		}
+		},
+		{
+			Description: "2D Action Platformer Game",
+			Category: "school",
+			Link: "https://drive.google.com/drive/u/0/folders/1y8E12kAWRMXpOm59eSQAPltR89zmHVU9",
+			Preview: "img/Sample_Gameplay.gif",
+			PrivateName: "Game Design project from SUTD, featured project"
+		},
 	];
 	return projectsData;
 }
