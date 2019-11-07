@@ -1,26 +1,80 @@
 <!DOCTYPE html>
 <html>
-<title>Zhi Min's Portfolio</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-<!--
-CSS
-============================================= -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="../css/font-awesome.min.css">
-<link rel="stylesheet" href="../css/icofont.min.css">
-<link rel="stylesheet" href="../css/icofont.css">
-<link rel="stylesheet" href="../css/bootstrap.css">
-<link rel="stylesheet" href="./css/main.css">
-<link rel="stylesheet" href="../css/navbar.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
-<!--<link rel="stylesheet" href="css/circle.css">-->
-<script src="js/main.js"></script>
+<head>
+	<title>Zhi Min's Portfolio</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+	<!--
+	CSS
+	============================================= -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/icofont.min.css">
+	<link rel="stylesheet" href="../css/icofont.css">
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="../css/navbar.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+	<!--<link rel="stylesheet" href="css/circle.css">-->
+	<script src="js/main.js"></script>
+
+	<!-- templates here -->
+	<template id="projects_templ">
+		<div class="w3-third w3-container w3-margin-bottom" id="project-single-wrapper">
+			<a href="" id="project-link">
+				<img src="/w3images/p1.jpg"
+				     alt=""
+				     style="width:100%"
+				     class="w3-hover-opacity"
+				     id="project-image"
+				>
+			</a>
+			<div class="w3-container w3-white">
+				<div id="project-label">
+					<b>Lorem Ipsum</b>
+				</div>
+				<div id="project-description">
+					<p>
+						Description here
+					</p>
+				</div>
+			</div>
+		</div>
+	</template>
+	<template id="skills_templ">
+		<p id="skill-name">Graphical Design</p>
+		<div class="w3-grey">
+			<div class="w3-container w3-dark-grey w3-padding w3-center"
+			     style="width:90%"
+			     id="skill-proficiency"
+			>90%
+			</div>
+		</div>
+	</template>
+
+
+	<script src="../js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="../js/vendor/bootstrap.min.js"></script>
+	<script src="js/main_templating.js"></script>
+	<script src="js/main_helpers.js"></script>
+	<script src="data/project_data.js"></script>
+	<script src="data/skills_data.js"></script>
+	<script>
+		// functions to be called immediately after html ready
+		$( document ).ready(function() {
+			// navbarToggler("myTopnav", "nav-btn");
+			// projectsFilterToggler('project-filters', 'proj-filter-item');
+			generateProjects();
+			// generateSkills();
+		});
+	</script>
+</head>
+
 
 <!-- body -->
 <body class="w3-light-grey w3-content" style="max-width:1600px">
@@ -88,7 +142,7 @@ CSS
 			<div class="w3-container w3-white">
 				<p><b>Emilia Series 1</b></p>
 				<p>
-					First of the Emilia Series from <b>HappyBlooom</b>
+					First of the Emilia Series from <b>HappyBloooms</b>
 				</p>
 			</div>
 		</div>
@@ -111,7 +165,7 @@ CSS
 	</div>
 
 	<!-- Second Photo Grid-->
-	<div class="w3-row-padding">
+	<div class="w3-row-padding" id="portfolio-build-section2">
 		<div class="w3-third w3-container w3-margin-bottom">
 			<img src="/w3images/p1.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
 			<div class="w3-container w3-white">
