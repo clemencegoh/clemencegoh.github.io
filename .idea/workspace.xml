@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53a857ec-6be2-4a0d-b180-ab3ad7608bc2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhimin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/zhimin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zhimin/js/main_templating.js" beforeDir="false" afterPath="$PROJECT_DIR$/zhimin/js/main_templating.js" afterDir="false" />
-    </list>
+    <list default="true" id="53a857ec-6be2-4a0d-b180-ab3ad7608bc2" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -56,8 +52,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/zhimin/js/main_templating.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="154">
-                  <caret line="26" column="88" selection-start-line="26" selection-start-column="88" selection-end-line="26" selection-end-column="88" />
+                <state relative-caret-position="195">
+                  <caret line="114" column="41" lean-forward="true" selection-start-line="114" selection-start-column="41" selection-end-line="114" selection-end-column="41" />
                   <folding>
                     <element signature="e#803#831#0" />
                   </folding>
@@ -90,7 +86,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>navbarFunction</find>
       <find>portfolio</find>
       <find>item</find>
       <find>introduct</find>
@@ -120,6 +115,7 @@
       <find>images</find>
       <find>console.log</find>
       <find>parseInt</find>
+      <find>console.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -284,16 +280,15 @@
       <workItem from="1573051975254" duration="6191000" />
       <workItem from="1573089505590" duration="7811000" />
       <workItem from="1573266267398" duration="1853000" />
-      <workItem from="1573273952715" duration="10031000" />
+      <workItem from="1573273952715" duration="10151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88337000" />
+    <option name="totallyTimeSpent" value="88457000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12623926" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -548,8 +543,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zhimin/js/main_templating.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="26" column="88" selection-start-line="26" selection-start-column="88" selection-end-line="26" selection-end-column="88" />
+        <state relative-caret-position="195">
+          <caret line="114" column="41" lean-forward="true" selection-start-line="114" selection-start-column="41" selection-end-line="114" selection-end-column="41" />
           <folding>
             <element signature="e#803#831#0" />
           </folding>
