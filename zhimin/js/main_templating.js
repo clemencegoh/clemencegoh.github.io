@@ -1,14 +1,25 @@
-function generateProjects(){
-    let projectsData = getProjectsData();
+function generateProjects(page = 0){
+
+	let projectsData = getProjectsData();
+
+	if (page < 0){
+		page = 0;
+	}
+
+	let max_pages = Math.ceil(projectsData.length/3);
+
+	if (page >= max_pages){
+		page = max_pages - 1;
+	}
+
+	setCurrentPagination(page);
 
     // init areas
     let projectsArea = document.getElementById("portfolio-build-section");
-    let projectsArea2 = document.getElementById('portfolio-build-section2');
     let proj_templ = document.getElementsByTagName("template")[0];  // portfolio template
 
     // clear area
     projectsArea.textContent = '';
-    projectsArea2.textContent = '';
 
     // init template pointers
     let proj_label = proj_templ.content.getElementById("project-label");
@@ -17,8 +28,8 @@ function generateProjects(){
     let proj_decription = proj_templ.content.getElementById("project-description");
     let proj_category = proj_templ.content.getElementById("project-single-wrapper");
 
-
-    for (let i=0;i<projectsData.length;i++){
+    // Shows max 3 per page
+    for (let i= (page * 3);i< (page * 3) + 3;i++){
         let d = projectsData[i];
         proj_category.setAttribute('class', 'w3-third w3-container w3-margin-bottom all ' + d.Category);
         // proj_category.innerText = d.Category;
@@ -35,6 +46,73 @@ function generateProjects(){
     }
 
     console.log('completed creating of projects');
+}
+
+function getNumberOfPages(){
+	let projectsData = getProjectsData();
+	return Math.ceil(projectsData.length/3)
+}
+
+function setCurrentPagination(num) {
+	localStorage.setItem('pagination', num);
+	setCurrentPaginationButtonToBlack();
+}
+
+function setCurrentPaginationButtonToBlack(){
+	let pagination_area = document.getElementById('pagination-area');
+
+	let elems = pagination_area.getElementsByClassName('w3-bar-item');
+
+	for (let i = 0; i < elems.length; i++) {
+		setBlackIfCurrent(elems[i]);
+	}
+}
+
+function setBlackIfCurrent(element){
+	if (parseInt(element.innerText) === (parseInt(localStorage.getItem('pagination')) + 1)){
+		element.setAttribute('class', 'w3-bar-item w3-black w3-button');
+	}else{
+		element.setAttribute('class', 'w3-bar-item w3-button w3-hover-black');
+	}
+}
+
+function generatePagination(number = 1) {
+	// min 1 page
+	let pagination_area = document.getElementById('pagination-area');
+
+	// clear text
+	pagination_area.innerText = '';
+
+	// add left and right navigators
+	let leftNode = document.createElement('a');
+	leftNode.setAttribute(
+		'href',
+		'javascript:generateProjects(localStorage.getItem("pagination") - 1)'
+		);
+	leftNode.setAttribute('class', 'w3-bar-item w3-button w3-hover-black');
+	leftNode.innerText = '«';
+	pagination_area.appendChild(leftNode);
+
+	for (let i=0;i<number;i++){
+		let newNode = document.createElement('a');
+		newNode.setAttribute(
+			'href',
+			'javascript:generateProjects(' + i.toString() + ')'
+		);
+		newNode.setAttribute('class', 'w3-bar-item w3-button w3-hover-black');
+		newNode.innerText = (i + 1).toString();
+		pagination_area.appendChild(newNode);
+	}
+
+	let rightNode = document.createElement('a');
+	rightNode.setAttribute(
+		'href',
+		'javascript:generateProjects(localStorage.getItem("pagination") + 1)'
+	);
+	rightNode.setAttribute('class', 'w3-bar-item w3-button w3-hover-black');
+	rightNode.innerText = '»';
+	pagination_area.appendChild(rightNode);
+
 }
 
 function timeSince(date) {
