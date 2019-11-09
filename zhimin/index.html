@@ -61,15 +61,13 @@
 	<script src="../js/vendor/jquery-2.2.4.min.js"></script>
 	<script src="../js/vendor/bootstrap.min.js"></script>
 	<script src="js/main_templating.js"></script>
-	<script src="js/main_helpers.js"></script>
 	<script src="data/project_data.js"></script>
 	<script src="data/skills_data.js"></script>
 	<script>
 		// functions to be called immediately after html ready
 		$( document ).ready(function() {
 			// projectsFilterToggler('project-filters', 'proj-filter-item');
-			generatePagination(getNumberOfPages());
-			generateProjects();
+			setProjectFilter('all');
 			// generateSkills();
 		});
 	</script>
@@ -118,17 +116,17 @@
 			<h1><b>Portfolio</b></h1>
 			<div class="w3-section w3-bottombar w3-padding-16">
 				<span class="w3-margin-right">Filter:</span>
-				<button class="w3-button w3-black">ALL</button>
-				<button class="w3-button w3-white">
+				<button class="w3-button w3-black" onclick="setProjectFilter('all')">ALL</button>
+				<button class="w3-button w3-white" onclick="setProjectFilter('theloftybouquets')">
 					<i class="icofont-flora-flower w3-margin-right"></i>Bouquets
 				</button>
-				<button class="w3-button w3-white">
+				<button class="w3-button w3-white" onclick="setProjectFilter('happybloooms')">
 					<i class="fa fa-diamond w3-margin-right"></i>Earrings
 				</button>
-				<button class="w3-button w3-white">
+				<button class="w3-button w3-white" onclick="setProjectFilter('graphics')">
 					<i class="icofont-designfloat w3-margin-right"></i>Graphics Design
 				</button>
-				<button class="w3-button w3-white">
+				<button class="w3-button w3-white" onclick="setProjectFilter('engineering')">
 					<i class="icofont-engineer w3-margin-right"></i>Engineering
 				</button>
 			</div>

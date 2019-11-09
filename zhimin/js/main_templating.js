@@ -1,9 +1,31 @@
 /*
 	Helper functions
  */
+let currentProjects = [];
+
+// filters all projects using filter name
+function setProjectFilter(filter_name) {
+	// initial filtering
+	let all_data = getProjectsData();
+	if (filter_name === 'all'){
+		currentProjects = all_data;
+	}else{
+		let temp_data = [];
+		for (let i=0;i<all_data.length;i++){
+			if (all_data[i].Category.includes(filter_name)){
+				temp_data.push(all_data[i]);
+			}
+		}
+		currentProjects = temp_data;
+	}
+
+	generateProjects();
+	generatePagination(getNumberOfPages());
+}
+
 function getNumberOfPages(){
-	let projectsData = getProjectsData();
-	return Math.ceil(projectsData.length/3)
+	console.log('number of pages to be created:' + Math.ceil(currentProjects.length/3));
+	return Math.ceil(currentProjects.length/3)
 }
 
 function setCurrentPagination(num) {
@@ -31,7 +53,6 @@ function setBlackIfCurrent(element){
 
 
 
-
 /*
 	Generation functions
 	To be called whenever html needs to be generated
@@ -39,10 +60,9 @@ function setBlackIfCurrent(element){
  */
 
 
-// Generate projects (on filter)
+// Generate projects (on page filter)
 function generateProjects(page = 0){
-
-	let projectsData = getProjectsData();
+	let projectsData = currentProjects;
 
 	if (page < 0){
 		page = 0;
@@ -73,6 +93,9 @@ function generateProjects(page = 0){
 	// Shows max 3 per page
 	for (let i= (page * 3);i< (page * 3) + 3;i++){
 		let d = projectsData[i];
+		if (!d){
+			break;
+		}
 		proj_category.setAttribute('class', 'w3-third w3-container w3-margin-bottom all ' + d.Category);
 		// proj_category.innerText = d.Category;
 		proj_label.innerHTML = '<b>' + d.PrivateName + '</b>';
@@ -86,8 +109,6 @@ function generateProjects(page = 0){
 		// append
 		projectsArea.appendChild(proj_node);
 	}
-
-	console.log('completed creating of projects');
 }
 
 // Generate pagination for projects (1,2,3,4,...)
