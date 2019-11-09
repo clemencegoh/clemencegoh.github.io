@@ -122,13 +122,13 @@
 				<button class="w3-button w3-white">
 					<i class="icofont-flora-flower w3-margin-right"></i>Bouquets
 				</button>
-				<button class="w3-button w3-white w3-hide-small">
+				<button class="w3-button w3-white">
 					<i class="fa fa-diamond w3-margin-right"></i>Earrings
 				</button>
-				<button class="w3-button w3-white w3-hide-small">
+				<button class="w3-button w3-white">
 					<i class="icofont-designfloat w3-margin-right"></i>Graphics Design
 				</button>
-				<button class="w3-button w3-white w3-hide-small">
+				<button class="w3-button w3-white">
 					<i class="icofont-engineer w3-margin-right"></i>Engineering
 				</button>
 			</div>
@@ -219,92 +219,38 @@
 		</p>
 		<hr>
 
-		<!--<h4>How much I charge</h4>-->
-		<!--&lt;!&ndash; Pricing Tables &ndash;&gt;-->
-		<!--<div class="w3-row-padding" style="margin:0 -16px">-->
-			<!--<div class="w3-third w3-margin-bottom">-->
-				<!--<ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">-->
-					<!--<li class="w3-black w3-xlarge w3-padding-32">Basic</li>-->
-					<!--<li class="w3-padding-16">Web Design</li>-->
-					<!--<li class="w3-padding-16">Photography</li>-->
-					<!--<li class="w3-padding-16">1GB Storage</li>-->
-					<!--<li class="w3-padding-16">Mail Support</li>-->
-					<!--<li class="w3-padding-16">-->
-						<!--<h2>$ 10</h2>-->
-						<!--<span class="w3-opacity">per month</span>-->
-					<!--</li>-->
-					<!--<li class="w3-light-grey w3-padding-24">-->
-						<!--<button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>-->
-					<!--</li>-->
-				<!--</ul>-->
-			<!--</div>-->
-
-			<!--<div class="w3-third w3-margin-bottom">-->
-				<!--<ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">-->
-					<!--<li class="w3-teal w3-xlarge w3-padding-32">Pro</li>-->
-					<!--<li class="w3-padding-16">Web Design</li>-->
-					<!--<li class="w3-padding-16">Photography</li>-->
-					<!--<li class="w3-padding-16">50GB Storage</li>-->
-					<!--<li class="w3-padding-16">Endless Support</li>-->
-					<!--<li class="w3-padding-16">-->
-						<!--<h2>$ 25</h2>-->
-						<!--<span class="w3-opacity">per month</span>-->
-					<!--</li>-->
-					<!--<li class="w3-light-grey w3-padding-24">-->
-						<!--<button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>-->
-					<!--</li>-->
-				<!--</ul>-->
-			<!--</div>-->
-
-			<!--<div class="w3-third">-->
-				<!--<ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">-->
-					<!--<li class="w3-black w3-xlarge w3-padding-32">Premium</li>-->
-					<!--<li class="w3-padding-16">Web Design</li>-->
-					<!--<li class="w3-padding-16">Photography</li>-->
-					<!--<li class="w3-padding-16">Unlimited Storage</li>-->
-					<!--<li class="w3-padding-16">Endless Support</li>-->
-					<!--<li class="w3-padding-16">-->
-						<!--<h2>$ 25</h2>-->
-						<!--<span class="w3-opacity">per month</span>-->
-					<!--</li>-->
-					<!--<li class="w3-light-grey w3-padding-24">-->
-						<!--<button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>-->
-					<!--</li>-->
-				<!--</ul>-->
-			<!--</div>-->
-		<!--</div>-->
-	<!--</div>-->
-
-	<!-- Contact Section -->
+	<!-- Previous Roles Section -->
 	<div class="w3-container w3-padding-large w3-grey">
 		<h4 id="contact"><b>Contact Me</b></h4>
 		<div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
-			<div class="w3-third w3-dark-grey">
+			<div class="w3-third w3-dark-grey w3-padding-16">
 				<p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
-				<p>email@email.com</p>
+				<p>leongzhimin1997@gmail.com</p>
 			</div>
-			<div class="w3-third w3-teal">
+			<div class="w3-third w3-teal w3-padding-16">
 				<p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
-				<p>Chicago, US</p>
+				<p>Singapore, SG</p>
 			</div>
-			<div class="w3-third w3-dark-grey">
+			<div class="w3-third w3-dark-grey w3-padding-16">
 				<p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
-				<p>512312311</p>
+				<p>+65 9423 3008</p>
 			</div>
 		</div>
 		<hr class="w3-opacity">
-		<form action="/action_page.php" target="_blank">
+		<form action="javascript: void(0);"
+		      onsubmit="sendEmailTo()"
+		      id="contact-form">
 			<div class="w3-section">
 				<label>Name</label>
-				<input class="w3-input w3-border" type="text" name="Name" required>
+				<input class="w3-input w3-border" type="text" name="Name" id="mail-name" required>
 			</div>
 			<div class="w3-section">
-				<label>Email</label>
-				<input class="w3-input w3-border" type="text" name="Email" required>
+				<label>Subject</label>
+				<input class="w3-input w3-border" type="text" name="Subject" id="mail-subject" required>
 			</div>
 			<div class="w3-section">
 				<label>Message</label>
-				<input class="w3-input w3-border" type="text" name="Message" required>
+				<input class="w3-input w3-border" type="text" name="Message" id="mail-message" required>
 			</div>
 			<button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
 		</form>

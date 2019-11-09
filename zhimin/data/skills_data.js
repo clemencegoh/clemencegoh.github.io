@@ -1,75 +1,24 @@
 function getSkillsData(){
 	let skills1 = [
 		{
-			Name: "Python",
+			Name: "Graphical Design",
 			Time_Start: new Date(2017, 0),
-			Projects: 7,
-			Proficiency: "Intermediate",
+			Projects: 0,
+			Proficiency: 90,
 		},
 		{
-			Name: "Golang",
+			Name: "Handicraft",
 			Time_Start: new Date(2017, 4),
 			Projects: 3,
-			Proficiency: "Basic",
+			Proficiency: 90,
 		},
 		{
-			Name: "Java",
+			Name: "Mechanical Engineering",
 			Time_Start: new Date(2017, 8),
 			Projects: 2,
-			Proficiency: "Basic",
-		},
-		{
-			Name: "Blockchain",
-			Time_Start: new Date(2018, 8),
-			Projects: 1,
-			Proficiency: "Basic",
-		},
-		{
-			Name: "Android",
-			Time_Start: new Date(2017, 8),
-			Projects: 1,
-			Proficiency: "Basic",
-		},
-		{
-			Name: "Game Design",
-			Time_Start: new Date(2019, 5),
-			Projects: 1,
-			Proficiency: "Basic",
+			Proficiency: 80,
 		},
 	];
 
-	let skills2 = [
-		{
-			Name: "Javascript",
-			Time_Start: new Date(2018, 4),
-			Projects: 4,
-			Proficiency: "Novice"
-		},
-		{
-			Name: "HTML/CSS",
-			Time_Start: new Date(2018, 4),
-			Projects: 3,
-			Proficiency: "Novice"
-		},
-		{
-			Name: "Reactjs",
-			Time_Start: new Date(2018, 4),
-			Projects: 1,
-			Proficiency: "Basic",
-		},
-		{
-			Name: "Cyber Security",
-			Time_Start: new Date(2019, 1),
-			Projects: 1,
-			Proficiency: "Basic",
-		},
-		{
-			Name: "AI",
-			Time_Start: new Date(2018, 8),
-			Projects: 2,
-			Proficiency: "Basic",
-		}
-	];
-
-	return [skills1, skills2]
+	return skills1;
 }
