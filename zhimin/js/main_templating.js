@@ -87,7 +87,7 @@ function generatePagination(number = 1) {
 	let leftNode = document.createElement('a');
 	leftNode.setAttribute(
 		'href',
-		'javascript:generateProjects(localStorage.getItem("pagination") - 1)'
+		'javascript:generateProjects(parseInt(localStorage.getItem("pagination")) - 1)'
 		);
 	leftNode.setAttribute('class', 'w3-bar-item w3-button w3-hover-black');
 	leftNode.innerText = '«';
@@ -107,7 +107,7 @@ function generatePagination(number = 1) {
 	let rightNode = document.createElement('a');
 	rightNode.setAttribute(
 		'href',
-		'javascript:generateProjects(localStorage.getItem("pagination") + 1)'
+		'javascript:generateProjects(parseInt(localStorage.getItem("pagination")) + 1)'
 	);
 	rightNode.setAttribute('class', 'w3-bar-item w3-button w3-hover-black');
 	rightNode.innerText = '»';
