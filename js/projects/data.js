@@ -36,6 +36,13 @@ function getProjectsData() {
 			Preview: "img/Sample_Gameplay.gif",
 			PrivateName: "Game Design project from SUTD, featured project"
 		},
+		{
+			Description: "Flutter QR Code scanner",
+			Category: "software",
+			Link: "https://github.com/clemencegoh/Flutter_Wrapper",
+			Preview: "img/flutter_simple_demo.gif",
+			PrivateName: "Meant to be a flutter app for experimenting, currently functioning as a QR code scanner"
+		},
 	];
 	return projectsData;
 }
