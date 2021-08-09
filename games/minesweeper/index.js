@@ -110,7 +110,6 @@ const setGameOver = (win) => {
   isGameover = true;
   const smiley = document.getElementById('status-icon');
   smiley.className = win ? "fas fa-smile win-green" : "fas fa-sad-tear gameover-red";
-  alert(win ? 'You Won!' : "Game over");
 
   // show all bombs
   const mineElements = document.getElementsByClassName('mine');
@@ -120,6 +119,8 @@ const setGameOver = (win) => {
     flagNode.className = 'fas fa-bomb';
     elem.appendChild(flagNode);
   }
+
+  alert(win ? 'You Won!' : "Game over");
 }
 
 const setFlag = (id) => {
