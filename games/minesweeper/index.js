@@ -117,7 +117,7 @@ const setGameOver = (win) => {
   
   for (elem of mineElements) {
     let flagNode = document.createElement('i');
-    flagNode.className = 'fab fa-font-awesome-flag';
+    flagNode.className = 'fas fa-bomb';
     elem.appendChild(flagNode);
   }
 }
