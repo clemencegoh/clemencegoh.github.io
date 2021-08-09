@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="img/fav.png">
+  <!-- Meta Description -->
+  <meta name="description" content="">
+  <!-- Meta Keyword -->
+  <meta name="keywords" content="">
+  <!-- meta character set -->
+  <meta charset="UTF-8">
+  <!-- Site Title -->
+  <title>Minesweeper</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+  <!--
+  CSS
+  ============================================= -->
+  <link rel="stylesheet" href="./index.css">			
+
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  
+
+  <!-- templates here -->
+  <template>
+    <span id="tile"></span>
+    <span id="mine-tile"></span>
+  </template>
+
+  <!-- Scripts -->
+  <script src="./index.js"></script>
+</head>
+<body>
+  <div class="flex-display centered aligned full-width flow-vertical">
+    <h1>Mine sweeper game!</h1>
+    <h3>Open all tiles and avoid the mines to win</h3>
+    <section class="margin-bottom">
+      <label for="select-level" class="bolded font-large margin-right">Select Level</label>
+      <select name="select-level" id="select-level" onchange="changeLevels()">
+        <option value="1">Beginner (8 x 8)</option>
+        <option value="2">Intermediate (16 x 16)</option>
+        <option value="3">Expert (16 x 30)</option>
+      </select>
+    </section>
+
+    <section id="mine-sweeper-wrapper" class="margin-top bg-grey wrapper">
+      <div id="header-status" class="flex-display spaced-content bg-white small-padding-all">
+        <span>Mines: <span id="mines-indicator">10</span></span>
+        <button id="reset-icon" onclick="">
+          <i class="far fa-smile"></i>
+        </button>
+        <span>Score: <span id="score-indicator">0 / 54</span></span>
+      </div>
+
+      <div id="game-section" class="game-section">
+
+      </div>
+    </section>
+  </div>
+</body>
+</html>

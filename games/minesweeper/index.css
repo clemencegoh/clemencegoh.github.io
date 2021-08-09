@@ -1,0 +1,111 @@
+/* 
+  In the style of atomic css
+*/
+:root {
+	--main-spacing-size: 12px;
+	--small-margin-spacing: 8px;
+}
+
+.flex-display {
+	display: flex;
+}
+
+.spaced-content {
+	justify-content: space-between;
+}
+
+.flow-vertical {
+	flex-direction: column;
+}
+
+.centered {
+	justify-content: center;
+}
+
+.aligned {
+	align-items: center;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.bolded {
+	font-weight: bold;
+}
+
+.font-large {
+	font-size: large;
+}
+
+.margin-right {
+	margin-right: var(--main-spacing-size);
+}
+
+.margin-left {
+	margin-left: var(--main-spacing-size);
+}
+
+.margin-bottom {
+	margin-bottom: var(--main-spacing-size);
+}
+
+.margin-top {
+	margin-top: var(--main-spacing-size);
+}
+
+.small-padding-all {
+	padding: var(--small-margin-spacing);
+}
+
+.bg-grey {
+	background-color: rgb(207, 207, 207);
+}
+
+.bg-white {
+	background-color: white;
+}
+
+.gameover-red {
+	color: red;
+}
+
+.win-green {
+	color: green;
+}
+
+.wrapper {
+	min-height: 300px;
+	min-width: 40vw;
+	border: 1px solid black;
+	padding: 8px;
+}
+
+.game-section {
+	display: grid;
+	border-right: 1px solid;
+	border-bottom: 1px solid;
+	margin-top: 12px;
+}
+
+.tile {
+	min-width: 40px;
+	height: 40px;
+	background-color: antiquewhite;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+}
+.tile:hover {
+	height: 40px;
+	background-color: grey;
+	cursor: pointer;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+}
+
+.tile-open {
+	height: 40px;
+	background-color: grey;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+}
