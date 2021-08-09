@@ -124,6 +124,8 @@ const setGameOver = (win) => {
 }
 
 const setFlag = (id) => {
+  if (gameboard[id].isOpen) return;
+
   let changedElement = document.getElementById(`tile-${id}`);
   if (changedElement.className?.includes('flagged')) {
     changedElement.className = changedElement.className.replace(' flagged', '');
