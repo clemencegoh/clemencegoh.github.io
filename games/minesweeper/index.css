@@ -89,6 +89,9 @@
 }
 
 .tile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	min-width: 40px;
 	height: 40px;
 	background-color: antiquewhite;
@@ -105,7 +108,13 @@
 
 .tile-open {
 	height: 40px;
-	background-color: grey;
+	background-color: rgb(190, 182, 182);
 	border-top: 1px solid black;
 	border-left: 1px solid black;
+}
+
+.flagged {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

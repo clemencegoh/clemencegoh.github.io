@@ -4,6 +4,9 @@ window.onload = function () {
 }
 
 let gameboard = {};
+let currentScore = 0;
+let totalScore = 54;
+let isGameover = false;
 
 class Tile {
   constructor(
@@ -32,7 +35,7 @@ class Tile {
   }
 
   get value(){
-    const val = this.calculateValue([
+    const arr = [
       this.top,
       this.topRight,
       this.right,
@@ -41,11 +44,14 @@ class Tile {
       this.bottomLeft,
       this.left,
       this.topLeft,
-    ]);
-    if (val === 0) {
-      return null;
+    ];
+    let valCount = 0;
+    for (const direction of arr) {
+      if (direction && direction.isMine) {
+        valCount += 1;
+      }
     }
-    return val;
+    return valCount;
   }
 
   get htmlElement() {
@@ -67,22 +73,12 @@ class Tile {
     if (this.isOpen) {
       newElement.className = 'tile tile-open';
     }
+    newElement.innerText = this.value;
     return newElement;
-  }
-
-  calculateValue(tileArray){
-    let val = 0;
-    for (const t of tileArray) {
-      if (t != null && t.isMine) {
-        val += 1;
-      }
-    }
-    return val;
   }
 }
 
 const checkClick = (event, id) => {
-  console.log('mousedown', event.button)
   if (event.button === 0) {
     // Left click to open
     return openTile(id);
@@ -92,24 +88,73 @@ const checkClick = (event, id) => {
   }
 }
 
+const resetGame = () => {
+  isGameover = false;
+  const smiley = document.getElementById('status-icon');
+  smiley.className = "far fa-smile";
+  changeLevels();
+}
+
+const setScore = (score) => {
+  const scoreElement = document.getElementById('score-indicator');
+  scoreElement.innerText = `${score} / ${totalScore}`;
+}
+
+const incrementScore = () => {
+  const scoreElement = document.getElementById('score-indicator');
+  currentScore += 1;
+  scoreElement.innerText = `${currentScore} / ${totalScore}`;
+}
+
+const setGameOver = (win) => {
+  isGameover = true;
+  const smiley = document.getElementById('status-icon');
+  smiley.className = win ? "fas fa-smile win-green" : "fas fa-sad-tear gameover-red";
+  alert(win ? 'You Won!' : "Game over");
+
+  // show all bombs
+  const mineElements = document.getElementsByClassName('mine');
+  
+  for (elem of mineElements) {
+    let flagNode = document.createElement('i');
+    flagNode.className = 'fab fa-font-awesome-flag';
+    elem.appendChild(flagNode);
+  }
+}
+
 const setFlag = (id) => {
   let changedElement = document.getElementById(`tile-${id}`);
-  console.log(changedElement.className)
   if (changedElement.className?.includes('flagged')) {
     changedElement.className = changedElement.className.replace(' flagged', '');
+    changedElement.removeChild(changedElement.firstChild);
   } else {
     changedElement.className = changedElement.className + ' flagged';
+    childNode = document.createElement('i');
+    childNode.className = 'fab fa-font-awesome-flag';
+    changedElement.appendChild(childNode);
   }
 }
 
 const openTile = (id) => {
+  if (isGameover) return;
+
   gameboard[id].isOpen = true;
   let changedElement = document.getElementById(`tile-${id}`);
   let gameSectionElement = document.getElementById('game-section');
-  const newElement = document.createElement('span')
+
+  if (gameboard[id].isMine) {
+    // Gameover
+    setGameOver(false);
+    return;
+  }
+  incrementScore();
 
   // Open here
   gameSectionElement.replaceChild(gameboard[id].htmlNode, changedElement);
+
+  if (currentScore === totalScore) {
+    setGameOver(true);
+  }
 }
 
 const generateGameboard = (columns, rows, mines) => {
@@ -123,18 +168,71 @@ const generateGameboard = (columns, rows, mines) => {
   gameboardElement.innerHTML = '';
 
   const totalCount = columns * rows;
+  
+  totalScore = totalCount - mines;
+  currentScore = 0;
+  isGameover = false;
 
   // init random locations
   let randomArr = [...Array(totalCount).keys()];
   const randSort = randomSort(randomArr);
   const selectedRandomNumbers = randSort.slice(0, mines);
   
-  // build array
+  // build gameboard hashmap
   for (let i=0; i<totalCount; i++) {
     if (selectedRandomNumbers.includes(i)) {
       gameboard[i] = new Tile(i, isMine = true);
     } else {
       gameboard[i] = new Tile(i, isMine = false);
+    }
+
+    // Connect left
+    const leftCond = i % columns !== 0;
+    if (leftCond) {
+      gameboard[i].left = gameboard[i-1];
+    }
+
+    // Connect up
+    const upCond = i >= columns; 
+    if (upCond) {
+      gameboard[i].top = gameboard[i - columns];
+    }
+
+    // Connect top left
+    if (leftCond && upCond) {
+      gameboard[i].topLeft = gameboard[i - columns - 1];
+    }
+
+    // Connect top right
+    const rightCond = (i % columns) !== (columns - 1);
+    if (upCond && rightCond) {
+      gameboard[i].topRight = gameboard[i - columns + 1];
+    }
+  }
+
+  // Backwards connect
+  for (let i = totalCount-1; i > -1; i--) {
+    // Connect right
+    const rightCond = (i % columns) !== (columns - 1);
+    if (rightCond) {
+      gameboard[i].right = gameboard[i + 1];
+    }
+
+    // Connect Bottom
+    const bottomCond = i <= totalCount - columns;
+    if (bottomCond) {
+      gameboard[i].bottom = gameboard[i + columns];
+    }
+
+    // Connect Right Bottom 
+    if (rightCond && bottomCond) {
+      gameboard[i].bottomRight = gameboard[i + columns + 1];
+    }
+
+    // Connect Left Bottom
+    const leftCond = i % columns !== 0;
+    if (leftCond && bottomCond) {
+      gameboard[i].bottomLeft = gameboard[i + columns - 1];
     }
   }
 
