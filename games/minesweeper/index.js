@@ -137,10 +137,10 @@ const setFlag = (id) => {
 
 const openTile = (id) => {
   if (isGameover) return;
+  if (gameboard[id].isOpen) return;
 
   gameboard[id].isOpen = true;
   let changedElement = document.getElementById(`tile-${id}`);
-  let gameSectionElement = document.getElementById('game-section');
 
   if (gameboard[id].isMine) {
     // Gameover
@@ -150,10 +150,40 @@ const openTile = (id) => {
   incrementScore();
 
   // Open here
-  gameSectionElement.replaceChild(gameboard[id].htmlNode, changedElement);
+  changedElement.className += ' tile-open';
+  const innerVal = gameboard[id].value;
+  changedElement.innerText = innerVal === 0 ? '' : innerVal;
 
   if (currentScore === totalScore) {
     setGameOver(true);
+  }
+
+  if (gameboard[id].value !== 0) {
+    return;
+  }
+  if (gameboard[id].top) {
+    openTile(gameboard[id].top.id);
+  }
+  if (gameboard[id].topRight) {
+    openTile(gameboard[id].topRight.id);
+  }
+  if (gameboard[id].right) {
+    openTile(gameboard[id].right.id);
+  }
+  if (gameboard[id].bottomRight) {
+    openTile(gameboard[id].bottomRight.id);
+  }
+  if (gameboard[id].bottom) {
+    openTile(gameboard[id].bottom.id);
+  }
+  if (gameboard[id].bottomLeft) {
+    openTile(gameboard[id].bottomLeft.id);
+  }
+  if (gameboard[id].left) {
+    openTile(gameboard[id].left.id);
+  }
+  if (gameboard[id].topLeft) {
+    openTile(gameboard[id].topLeft.id);
   }
 }
 
