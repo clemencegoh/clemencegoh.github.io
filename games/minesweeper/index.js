@@ -94,8 +94,11 @@ const checkClick = (event, id) => {
 
 const setFlag = (id) => {
   let changedElement = document.getElementById(`tile-${id}`);
-  if (changedElement.style.includes('flagged')) {
-     
+  console.log(changedElement.className)
+  if (changedElement.className?.includes('flagged')) {
+    changedElement.className = changedElement.className.replace(' flagged', '');
+  } else {
+    changedElement.className = changedElement.className + ' flagged';
   }
 }
 
