@@ -2,8 +2,22 @@ function getProjectsData() {
 	// add accordingly, array of json data
 	let projectsData = [
 		{
+			Description: "Invento - inventory management mobile app",
+			Category: "software",
+			Link: "https://drive.google.com/drive/folders/1jzt3V-25clzJxqFInngAlKl9sOM0YLxy?usp=sharing",
+			Preview: "img/invento_preview.jpg",
+			PrivateName: "Invento"
+		},
+		{
+			Description: "Minesweeper game",
+			Category: "website",
+			Link: "https://clemencegoh.github.io/games/minesweeper",
+			Preview: "img/minesweeper_preview.jpg",
+			PrivateName: "Minesweeper game"
+		},
+		{
 			Description: "Flight Insurance Ethereum Dapp",
-			Category: "software website school",
+			Category: "website school",
 			Link: "https://github.com/clemencegoh/SUTD_Blockchain_50.037/tree/master/dapp",
 			Preview: "img/simple_dapp.JPG",
 			PrivateName: "Ethereum Blockchain Dapp"
