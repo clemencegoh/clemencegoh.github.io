@@ -2,12 +2,22 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Title</title>
+	<title>Prototyping...</title>
+
+	<!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin defer></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin defer></script>
+	<!-- Babel for jsx -->
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js" defer></script>
+
+  <!-- Load our React component. -->
+  <script type="text/babel" src="./app.js" defer></script>
 </head>
 <body>
-	<h1>Welcome to the prototypes directory</h1>
-	<h2>Highly undeveloped page</h2>
-	<h2>Will be used as an archive for all future projects</h2>
-	<a href="prototypes.html">Click here to nav</a>
+	<h1>Prototype page to have fun</h1>
+	<hr>
+	<!-- React container entrypoint -->
+	<div id="react_app"></div>
 </body>
 </html>
