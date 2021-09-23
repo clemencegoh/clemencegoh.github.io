@@ -1,0 +1,54 @@
+body {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	margin-top: 12px;
+}
+
+.controls-area {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	border-radius: 50%;
+	border: 1px solid #c9c9c9;
+}
+
+.controls-area span {
+	height: 40px;
+	width: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.control-button {
+	border-radius: 8px;
+	border: 2px solid black;
+	padding: 4px;
+}
+
+.depressed {
+	background-color: #858585;
+}
+
+canvas {
+	border: 2px solid;
+}
+
+@media only screen and (max-width: 480px) {
+	footer {
+		position: absolute;
+		bottom: 8vh;
+		left: 50%;
+		right: 50%;
+	}
+
+	canvas {
+		max-width: 400px;
+		width: 100%;
+	}
+}
