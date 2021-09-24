@@ -1,6 +1,33 @@
 'use strict';
 
+/**
+ * Game Objects
+ */
+let canvas = document.getElementById('game');
+let context = canvas.getContext('2d');
 
+let movespeed = 16;
+let count = 0;
+const snake = {
+  x: 160,
+  y: 160,
+
+  // velocity
+  dx: movespeed,
+  dy: 0,
+
+  // keep track of cells that body occupies
+  body: [],
+  max_length: 4,
+}
+const apple = {
+  x: 320,
+  y: 320,
+}
+
+function getRandomNumber(min, max){
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
 {
   /**
@@ -37,8 +64,7 @@
     function ButtonControl(direction){
       const [stylename, setStylename] = React.useState('control-button');
 
-      function mousedown(){
-        setStylename('control-button depressed');
+      function onclick(){
         switch (direction) {
           case Directions.UP:
             return snakeUp();
@@ -54,14 +80,9 @@
         }
       }
 
-      function mouseup(){
-        setStylename('control-button');
-      }
-
       return (
         <button 
-          onMouseDown={mousedown} 
-          onMouseUp={mouseup}
+          onClick={onclick}
           className={stylename}
         >
           <i className={`fas fa-chevron-${direction}`}></i>
@@ -94,6 +115,71 @@ function gameloop(){
   count = 0;
   context.clearRect(0,0,canvas.width,canvas.height);
 
+  // move snake by it's velocity
+  snake.x += snake.dx;
+  snake.y += snake.dy;
+
+  // wrap snake position horizontally on edge of screen
+  if (snake.x < 0) {
+    snake.x = canvas.width - movespeed;
+  }
+  else if (snake.x >= canvas.width) {
+    snake.x = 0;
+  }
+  
+  // wrap snake position vertically on edge of screen
+  if (snake.y < 0) {
+    snake.y = canvas.height - movespeed;
+  }
+  else if (snake.y >= canvas.height) {
+    snake.y = 0;
+  }
+
+  // keep track of where snake has been. front of the array is always the head
+  snake.body.unshift({x: snake.x, y: snake.y});
+
+  // remove cells as we move away from them
+  if (snake.body.length > snake.max_length) {
+    snake.body.pop();
+  }
+
+  // draw apple
+  context.fillStyle = 'red';
+  context.fillRect(apple.x, apple.y, movespeed-1, movespeed-1);
+
+  // draw snake one cell at a time
+  context.fillStyle = 'green';
+  snake.body.forEach(function(cell, index) {
+    
+    // drawing 1 px smaller than the movespeed creates a movespeed effect in the snake body so you can see how long it is
+    context.fillRect(cell.x, cell.y, movespeed-1, movespeed-1);  
+
+    // snake ate apple
+    if (cell.x === apple.x && cell.y === apple.y) {
+      snake.max_length++;
+
+      // canvas is 400x400 which is 25x25 movespeeds 
+      apple.x = getRandomNumber(0, 25) * movespeed;
+      apple.y = getRandomNumber(0, 25) * movespeed;
+    }
+
+    // check collision with all cells after this one (modified bubble sort)
+    for (let i = index + 1; i < snake.body.length; i++) {
+      
+      // snake occupies same space as a body part. reset game
+      if (cell.x === snake.body[i].x && cell.y === snake.body[i].y) {
+        snake.x = 160;
+        snake.y = 160;
+        snake.body = [];
+        snake.max_length = 4;
+        snake.dx = movespeed;
+        snake.dy = 0;
+
+        apple.x = getRandomNumber(0, 25) * movespeed;
+        apple.y = getRandomNumber(0, 25) * movespeed;
+      }
+    }
+  });
 }
 
 
@@ -102,22 +188,50 @@ function gameloop(){
  * Event listeners
  */
 
-function snakeUp(){}
-function snakeDown(){}
-function snakeRight(){}
-function snakeLeft(){}
+function snakeUp(){
+  console.debug('snake going up')
+  if (snake.dy !== 0){
+    return;
+  }
+  snake.dy = -movespeed;
+  snake.dx = 0;
+}
+function snakeDown(){
+  console.debug('snake going down')
+  if (snake.dy !== 0){
+    return;
+  }
+  snake.dy = movespeed;
+  snake.dx = 0;
+}
+function snakeRight(){
+  console.debug('snake going right')
+  if (snake.dx !== 0){
+    return;
+  }
+  snake.dy = 0;
+  snake.dx = movespeed;
+}
+function snakeLeft(){
+  console.debug('snake going left')
+  if (snake.dx !== 0){
+    return;
+  }
+  snake.dy = 0;
+  snake.dx = -movespeed;
+}
 
 document.addEventListener('keydown', (e) => {
   e = e || window.event;
-  const key = e.key || e.keyCode;
+  const key = e.key;
   switch (key) {
-    case 37:
+    case 'ArrowLeft':
       return snakeLeft();
-    case 38:
+    case 'ArrowUp':
       return snakeUp();
-    case 39:
+    case 'ArrowRight':
       return snakeRight();
-    case 40:
+    case 'ArrowDown':
       return snakeDown();
     default:
       // do nothing
@@ -126,4 +240,4 @@ document.addEventListener('keydown', (e) => {
 })
 
 // Start the game
-// requestAnimationFrame(gameloop);
+requestAnimationFrame(gameloop);
