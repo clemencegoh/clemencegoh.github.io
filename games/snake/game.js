@@ -31,22 +31,6 @@ function getRandomNumber(min, max){
 
 {
   /**
-   * Rendering game board
-   */
-  const domContainer = document.querySelector('#game');
-  const e = React.createElement;
-
-  function GameArea(){
-    return (
-      <div></div>
-    )
-  }
-
-  ReactDOM.render(e(GameArea), domContainer);
-}
-
-{
-  /**
    * Rendering game controls
    */
   const domContainer = document.querySelector('#game-controls');
@@ -62,8 +46,6 @@ function getRandomNumber(min, max){
   function GameController(){
 
     function ButtonControl(direction){
-      const [stylename, setStylename] = React.useState('control-button');
-
       function onclick(){
         switch (direction) {
           case Directions.UP:
@@ -83,7 +65,7 @@ function getRandomNumber(min, max){
       return (
         <button 
           onClick={onclick}
-          className={stylename}
+          className={'control-button'}
         >
           <i className={`fas fa-chevron-${direction}`}></i>
         </button>
