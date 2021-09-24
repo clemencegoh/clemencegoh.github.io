@@ -29,6 +29,34 @@ function getRandomNumber(min, max){
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+let incrementScore;
+let resetScore;
+
+{
+  /**
+   * Render score counter
+   */
+   const domContainer = document.querySelector('#score');
+   const e = React.createElement;
+
+   function GameScore(){
+    const [score, setScore] = React.useState(snake.max_length - 4);
+    incrementScore = () => {
+      setScore(score + 1);
+    };
+    resetScore = () => {
+      setScore(0);
+    }
+
+    return (
+    <h3>Current Score: {score}</h3>
+    );
+   }
+
+   ReactDOM.render(e(GameScore), domContainer);
+}
+
+
 {
   /**
    * Rendering game controls
@@ -140,6 +168,9 @@ function gameloop(){
     if (cell.x === apple.x && cell.y === apple.y) {
       snake.max_length++;
 
+      // Increment score
+      incrementScore();
+
       // canvas is 400x400 which is 25x25 movespeeds 
       apple.x = getRandomNumber(0, 25) * movespeed;
       apple.y = getRandomNumber(0, 25) * movespeed;
@@ -159,6 +190,8 @@ function gameloop(){
 
         apple.x = getRandomNumber(0, 25) * movespeed;
         apple.y = getRandomNumber(0, 25) * movespeed;
+        
+        resetScore();
       }
     }
   });

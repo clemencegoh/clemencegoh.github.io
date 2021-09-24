@@ -10,6 +10,11 @@ footer {
 	margin-top: 12px;
 }
 
+.score-area {
+	display: flex;
+	justify-content: center;
+}
+
 .controls-area {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -40,6 +45,12 @@ canvas {
 }
 
 @media only screen and (max-width: 480px) {
+	header {
+		display: flex;
+		align-items: center;
+		margin-bottom: 8px;
+	}
+
 	footer {
 		position: absolute;
 		bottom: 8vh;
@@ -50,5 +61,11 @@ canvas {
 	canvas {
 		max-width: 400px;
 		width: 100%;
+	}
+
+	.score-area {
+		position: absolute;
+		right: 8px;
+		margin-top: 64px;
 	}
 }
