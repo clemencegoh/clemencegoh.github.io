@@ -4,15 +4,29 @@ body {
 	align-items: center;
 }
 
+header {
+	text-align: center;
+}
+
 footer {
 	display: flex;
 	justify-content: center;
 	margin-top: 12px;
+	width: 400px;
 }
 
 .score-area {
 	display: flex;
 	justify-content: center;
+}
+
+.score-wrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 400px;
+	margin-top: 8px;
+	font-size: 1.2em;
+	font-weight: 600;
 }
 
 .controls-area {
@@ -40,6 +54,34 @@ footer {
 	background-color: #858585;
 }
 
+.game-controls-area {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.meta-controls {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-end;
+	flex-flow: column;
+}
+
+.meta-controls div {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin: 0 0 8px 24px;
+}
+
+.meta-controls button {
+	height: 24px;
+	width: 24px;
+	margin-right: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 canvas {
 	border: 2px solid;
 }
@@ -47,15 +89,14 @@ canvas {
 @media only screen and (max-width: 480px) {
 	header {
 		display: flex;
+		flex-flow: column;
 		align-items: center;
 		margin-bottom: 8px;
 	}
 
 	footer {
 		position: absolute;
-		bottom: 8vh;
-		left: 50%;
-		right: 50%;
+		bottom: 4px;
 	}
 
 	canvas {
@@ -63,9 +104,12 @@ canvas {
 		width: 100%;
 	}
 
-	.score-area {
-		position: absolute;
-		right: 8px;
-		margin-top: 64px;
+	.score-wrapper {
+		display: flex;
+		justify-content: space-between;
+		width: 95vw;
+		margin-top: 8px;
+		font-size: 1.2em;
+		font-weight: 600;
 	}
 }

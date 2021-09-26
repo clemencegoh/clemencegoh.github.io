@@ -41,15 +41,25 @@ let resetScore;
 
    function GameScore(){
     const [score, setScore] = React.useState(snake.max_length - 4);
+
+    const highScore = React.useRef(0);
+    
     incrementScore = () => {
       setScore(score + 1);
     };
+
     resetScore = () => {
+      if (score > highScore.current) {
+        highScore.current = score;
+      }
       setScore(0);
     }
 
     return (
-    <h3>Current Score: {score}</h3>
+      <div className="score-wrapper">
+        <span>High score: {highScore.current}</span>
+        <span>Current Score: {score}</span>
+      </div>
     );
    }
 
@@ -73,6 +83,17 @@ let resetScore;
 
   function GameController(){
 
+    const Input = {
+      ARROWS: 'arrows',
+      JOYSTICK: 'joystick',
+    }
+    const [inputMode, setInputMode] = React.useState(Input.ARROWS);
+
+    /**
+     * Template button control to emulate arrow keys on mobile view
+     * @param {Directions enum} direction 
+     * @returns callback function to perform that specific action
+     */
     function ButtonControl(direction){
       function onclick(){
         switch (direction) {
@@ -89,7 +110,6 @@ let resetScore;
             break;
         }
       }
-
       return (
         <button 
           onClick={onclick}
@@ -100,11 +120,32 @@ let resetScore;
       );
     }
 
-    return (<div id="controls-area" className="controls-area">
-      <span></span>{ButtonControl(Directions.UP)}<span></span>
-      {ButtonControl(Directions.LEFT)}<span></span>{ButtonControl(Directions.RIGHT)}
-      <span></span>{ButtonControl(Directions.DOWN)}<span></span>  
-    </div>);
+    let controls;
+
+    if (inputMode === Input.JOYSTICK) {
+      controls = (<div></div>);
+    }
+    if (inputMode === Input.ARROWS) {
+      controls = (<div id="controls-area" className="controls-area">
+        <span></span>{ButtonControl(Directions.UP)}<span></span>
+        {ButtonControl(Directions.LEFT)}<span></span>{ButtonControl(Directions.RIGHT)}
+        <span></span>{ButtonControl(Directions.DOWN)}<span></span>  
+      </div>);
+    }
+
+    // TODO: This looks ugly as hell
+    return (<div className="game-controls-area">
+      <div></div>
+      <div>
+        {/* <div className="select-control-area">
+          <select className="select-controls" onChange={(e) => setInputMode(e.target.value)}>
+            <option value={Input.ARROWS}>Arrows</option>
+            <option value={Input.JOYSTICK}>Joystick</option>
+          </select>
+        </div> */}
+        {controls}
+      </div>
+      </div>);
   }
 
   ReactDOM.render(e(GameController), domContainer);
@@ -179,7 +220,7 @@ function gameloop(){
     // check collision with all cells after this one (modified bubble sort)
     for (let i = index + 1; i < snake.body.length; i++) {
       
-      // snake occupies same space as a body part. reset game
+      // snake occupies same space as a body part. reset game - lose condition
       if (cell.x === snake.body[i].x && cell.y === snake.body[i].y) {
         snake.x = 160;
         snake.y = 160;
@@ -191,7 +232,7 @@ function gameloop(){
         apple.x = getRandomNumber(0, 25) * movespeed;
         apple.y = getRandomNumber(0, 25) * movespeed;
         
-        resetScore();
+        resetScore()
       }
     }
   });
