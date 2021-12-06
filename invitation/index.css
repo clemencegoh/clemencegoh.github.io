@@ -1,0 +1,152 @@
+/** Globals **/
+
+:root {
+	--bg-color: #84a59d;
+	--cta-color: #f28482;
+	--card-bg: #f7ede2;
+	font-family: "Sniglet", cursive;
+	font-weight: 400;
+	background-color: var(--bg-color);
+}
+
+h1 {
+	font-size: 96px;
+}
+h2 {
+	font-size: 48px;
+}
+h3 {
+	font-size: 32px;
+}
+h4 {
+	font-size: 24px;
+}
+p {
+	font-size: 18px;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+button {
+	font-size: 24px;
+	padding: 12px 48px;
+	cursor: pointer;
+}
+
+/** Headers **/
+
+header {
+	background-color: white;
+	color: var(--bg-color);
+
+	display: flex;
+	height: 64px;
+
+	justify-content: space-around;
+	padding: 0 16px;
+
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nav-title {
+	display: flex;
+	align-items: center;
+}
+.nav-title > img {
+	aspect-ratio: 1/1;
+	margin-right: 10px;
+}
+
+.nav-link {
+	margin-right: 24px;
+	font-size: 18px;
+}
+
+.nav-actions {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.content-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80vw;
+	margin: auto;
+	margin-top: 5vh;
+}
+
+/** language card **/
+.wrapper-card {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.wrapper-card > img {
+	position: absolute;
+	height: auto;
+	width: 32%;
+}
+.card {
+	background-image: url("./images/card-bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	aspect-ratio: 935 / 540;
+	width: 80%;
+
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: flex-end;
+}
+.card > div {
+	margin-right: 12vw;
+}
+.card .lang-buttons button {
+	background-color: var(--bg-color);
+	color: white;
+
+	border: 1px solid #f7ede2;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 8px;
+	width: 80%;
+}
+.lang-buttons {
+	display: flex;
+	justify-content: space-between;
+	width: 420px;
+}
+
+.divider {
+	width: 48px;
+	height: auto;
+	display: inline-block;
+}
+
+/** invitation card **/
+.invitation-card {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.rsvp-cta {
+	background-color: var(--cta-color);
+	color: white;
+
+	border-radius: 8px;
+	border: 1px solid var(--card-bg);
+	font-size: 18px;
+}
+
+/** 
+	* Mobile view
+	*/
+
+@media only screen and (max-width: 440px) {
+}

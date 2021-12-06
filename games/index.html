@@ -21,15 +21,30 @@
   <link rel="stylesheet" href="./index.css">			
   <!--<link rel="stylesheet" href="css/circle.css">-->
 
-  <!-- templates here -->
-  <template>
-  </template>
+  <!-- Load react -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin defer></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin defer></script>
+	<!-- Babel for jsx -->
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js" defer></script>
 
+  
   <!-- Scripts -->
-  <script src="./index.js" defer></script>
+  <script type="text/babel" src="./index.js" defer></script>
+  <script type="text/babel" src="joystick.js" defer></script>
+  <script type="text/babel" defer>
+    {
+      const domContainer = document.querySelector('#test-app');
+      const e = React.createElement;
+      function GenerateJoystick(){
+        return (<Joystick></Joystick>);
+      }
+      ReactDOM.render(e(GenerateJoystick), domContainer);
+    }
+  </script>
 </head>
 <body>	
-  
-
+  <h1>Hello World!</h1>
+  <h3>Games main page</h3>
+  <div id="test-app"></div>
 </body>
 </html>
