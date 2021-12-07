@@ -54,8 +54,7 @@ header {
 	align-items: center;
 }
 .nav-title > img {
-	aspect-ratio: 1/1;
-	margin-right: 10px;
+	margin-right: 8px;
 }
 
 .nav-link {
@@ -101,6 +100,8 @@ header {
 	flex-flow: column;
 	justify-content: center;
 	align-items: flex-end;
+
+	border-radius: 8px;
 }
 .card > div {
 	margin-right: 12vw;
@@ -149,4 +150,47 @@ header {
 	*/
 
 @media only screen and (max-width: 440px) {
+	.navbar {
+		justify-content: space-between;
+	}
+	.nav-title h4 {
+		display: none;
+	}
+	.nav-actions ul {
+		display: none;
+	}
+	.content-block {
+		margin: 20px 8px;
+		width: auto;
+	}
+	.wrapper-card {
+		flex-flow: column;
+	}
+	.wrapper-card img {
+		width: 48%;
+	}
+	.card {
+		background-image: url("./images/card-bg-mobile.png");
+		aspect-ratio: auto;
+		height: auto;
+		margin-top: 100px;
+	}
+	.card > div {
+		margin: 12vh auto 80px;
+		width: auto;
+	}
+	.card h3 {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.lang-buttons {
+		flex-flow: column;
+		align-items: center;
+		width: 100%;
+	}
+	.divider {
+		height: 16px;
+	}
 }

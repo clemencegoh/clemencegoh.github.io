@@ -19,7 +19,10 @@ function ReactiveCard() {
 				<span></span>
 				<div className="card">
 					<div>
-						<h3>Select Language / 选择语言：</h3>
+						<h3>
+							<span className="top-break">Select Language</span>
+							<span>/ 选择语言：</span>
+						</h3>
 						<div className="lang-buttons">
 							<button onClick={() => chooseLang("eng")}>English</button>
 							<span className="divider"></span>
