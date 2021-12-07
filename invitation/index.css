@@ -11,7 +11,7 @@
 
 h1 {
 	font-size: 96px;
-	margin: 40px 0 0 0;
+	margin: 32px 0 0 0;
 }
 h2 {
 	font-size: 48px;
@@ -25,9 +25,13 @@ h4 {
 	font-size: 24px;
 	margin: 24px 0 0;
 }
-p {
+h5 {
 	font-size: 18px;
 	margin: 8px 0 32px;
+}
+p {
+	font-size: 18px;
+	margin: 0;
 }
 body {
 	margin: 0;
@@ -40,7 +44,7 @@ button {
 	font-family: "Sniglet", cursive;
 }
 
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 550px) {
 	h1 {
 		font-size: 48px;
 		margin: 20px 0 0 0;
@@ -59,7 +63,7 @@ button {
 	}
 	p {
 		font-size: 18px;
-		margin: 8px 0 32px;
+		margin: 0;
 	}
 }
 
@@ -76,6 +80,10 @@ header {
 	padding: 0 16px;
 
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header-text {
+	margin: 0;
 }
 
 .nav-title {
@@ -134,7 +142,8 @@ header {
 	border-radius: 8px;
 }
 .card > div {
-	margin-right: 12vw;
+	margin: auto;
+	padding-left: 120px;
 }
 .card .lang-buttons button {
 	background-color: var(--bg-color);
@@ -165,7 +174,7 @@ header {
 .language-select {
 	display: flex;
 	justify-content: flex-end;
-	width: inherit;
+	width: 100%;
 }
 .language-select button {
 	color: white;
@@ -185,6 +194,9 @@ header {
 	align-items: center;
 	text-align: center;
 }
+[data-lang="chi"] {
+	margin-bottom: 40px !important;
+}
 
 .rsvp-cta {
 	background-color: var(--cta-color);
@@ -194,12 +206,15 @@ header {
 	border: 1px solid var(--card-bg);
 	font-size: 18px;
 }
+.p-block {
+	margin: 24px 0 32px;
+}
 
 /** 
 	* Mobile view
 	*/
 
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 550px) {
 	.navbar {
 		justify-content: space-between;
 	}
@@ -208,6 +223,9 @@ header {
 	}
 	.nav-actions ul {
 		display: none;
+	}
+	.select-lang-title {
+		margin-top: 48px;
 	}
 	.content-block {
 		margin: 20px 8px;
@@ -227,8 +245,9 @@ header {
 		margin-top: 100px;
 	}
 	.card > div {
-		margin: 12vh auto 80px;
+		margin: 96px auto 64px;
 		width: auto;
+		padding: 0;
 	}
 	.card h3 {
 		display: flex;
@@ -243,5 +262,8 @@ header {
 	}
 	.divider {
 		height: 16px;
+	}
+	.p-block {
+		margin: 16px 0;
 	}
 }
