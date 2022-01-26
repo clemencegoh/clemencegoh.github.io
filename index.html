@@ -1,225 +1,298 @@
-	<!DOCTYPE html>
-	<html lang="zxx" class="no-js">
-	<head>
-		<!-- Mobile Specific Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- Favicon-->
-		<link rel="shortcut icon" href="img/fav.png">
-		<!-- Meta Description -->
-		<meta name="description" content="">
-		<!-- Meta Keyword -->
-		<meta name="keywords" content="">
-		<!-- meta character set -->
-		<meta charset="UTF-8">
-		<!-- Site Title -->
-		<title>Clemence Goh</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Mobile Specific Meta -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png" />
+    <!-- Meta Description -->
+    <meta name="description" content="" />
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="" />
+    <!-- meta character set -->
+    <meta charset="UTF-8" />
+    <!-- Site Title -->
+    <title>Clemence Goh</title>
 
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
-		<!--
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700"
+      rel="stylesheet"
+    />
+    <!--
 		CSS
 		============================================= -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/bootstrap.css">			
-		<link rel="stylesheet" href="css/main.css">			
-		<link rel="stylesheet" href="css/navbar.css">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
-		<!--<link rel="stylesheet" href="css/circle.css">-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+    />
 
-		<!-- templates here -->
-		<template id="projects_area">
-			<div class="single-portfolio col-sm-4 all" id="filter_fields">
-				<div class="relative">
-					<div class="thumb">
-						<a href="http://mixriev.herokuapp.com/" id="proj_link">
-							<div class="overlay overlay-bg"></div>
-							<img class="image img-fluid" src="" alt="" id="proj_preview_img">
-						</a>
-					</div>
+    <!-- scripts / react -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+      defer
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+      defer
+    ></script>
+    <!-- Babel for jsx -->
+    <script
+      crossorigin
+      src="https://unpkg.com/babel-standalone@6/babel.min.js"
+    ></script>
 
-				</div>
-				<div class="p-inner">
-					<h4 class="proj-title" id="proj_description"></h4>
-					<div class="cat" id="proj_category"></div>
-				</div>					                               
-			</div>
-		</template>
+    <script
+      type="text/babel"
+      data-presets="react"
+      data-type="module"
+      src="./index.js"
+      defer
+    ></script>
+    <script src="./data.js"></script>
 
-		<template id="skills_area">
-			<div class="single-skill-container">
-				<p class="skill-desc" id="skill-desc">Python</p>
-				<p id="skill-details">3 Years, 4 Projects</p>
-				<div class="skill-container">
-					<div class="single-skill Advanced" id="skill-proficiency">
-						Advanced
-					</div>
-				</div>
-			</div>
-		</template>
+    <!-- templates here -->
+    <template id="projects_area">
+      <div class="single-portfolio col-sm-4 all" id="filter_fields">
+        <div class="relative">
+          <div class="thumb">
+            <a href="http://mixriev.herokuapp.com/" id="proj_link">
+              <div class="overlay overlay-bg"></div>
+              <img
+                class="image img-fluid"
+                src=""
+                alt=""
+                id="proj_preview_img"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="p-inner">
+          <h4 class="proj-title" id="proj_description"></h4>
+          <div class="cat" id="proj_category"></div>
+        </div>
+      </div>
+    </template>
 
-		<!-- Scripts -->
-		<script src="js/vendor/jquery-2.2.4.min.js"></script>
-		<script src="js/vendor/bootstrap.min.js"></script>
-		<script src="js/main_templating.js"></script>
-		<script src="js/main_helpers.js"></script>
-		<script src="js/projects/data.js"></script>
-		<script src="js/skills/data.js"></script>
-		<script>
-			// functions to be called immediately after html ready
-			$( document ).ready(function() {
-				navbarToggler("myTopnav", "nav-btn");
-				projectsFilterToggler('project-filters', 'proj-filter-item');
-				generateProjects();
-				generateSkills();
-			});
-		</script>
-	
-	</head>
-	<body>	
-		<div class="topnav sticky" id="myTopnav">
-			<a href="./" id="navbar-me"
-			   class="nav-btn">Clemence Goh</a>
-			<a href="#Home" id="navbar-home"
-			   class="nav-btn active"
-			   onclick="goto_Section('Home')">Home</a>
-			<a href="#About" id="navbar-about"
-			   class="nav-btn"
-			   onclick="goto_Section('About')">About</a>
-			<a href="#Portfolio" id="navbar-portfolio"
-			   class="nav-btn"
-			   onclick="goto_Section('Portfolio')">Portfolio</a>
-			<a href="#Skills" id="navbar-skills"
-			   class="nav-btn"
-			   onclick="goto_Section('Skills')">Skills</a>
-			<a href="#Resume" id="navbar-resume"
-			   class="nav-btn"
-			   onclick="goto_Section('Resume')">Resume</a>
-			<!-- Blog under maintenance -->
-			<!--<a href="./blog">Notes -></a>-->
-			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="navbarFunction()">&#9776;</a>
-		</div>
+    <template id="skills_area">
+      <div class="single-skill-container">
+        <p class="skill-desc" id="skill-desc">Python</p>
+        <p id="skill-details">3 Years, 4 Projects</p>
+        <div class="skill-container">
+          <div class="single-skill Advanced" id="skill-proficiency">
+            Advanced
+          </div>
+        </div>
+      </div>
+    </template>
 
+    <!-- Scripts -->
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/main_templating.js"></script>
+    <script src="js/main_helpers.js"></script>
+    <script src="js/projects/data.js"></script>
+    <script src="js/skills/data.js"></script>
+    <script>
+      // functions to be called immediately after html ready
+      $(document).ready(function () {
+        navbarToggler("myTopnav", "nav-btn");
+        projectsFilterToggler("project-filters", "proj-filter-item");
+        generateProjects();
+        generateSkills();
+      });
+    </script>
+  </head>
+  <body>
+    <div class="topnav sticky" id="myTopnav">
+      <a href="./" id="navbar-me" class="nav-btn">Clemence Goh</a>
+      <a
+        href="#Home"
+        id="navbar-home"
+        class="nav-btn active"
+        onclick="goto_Section('Home')"
+        >Home</a
+      >
+      <a
+        href="#About"
+        id="navbar-about"
+        class="nav-btn"
+        onclick="goto_Section('About')"
+        >About</a
+      >
+      <a
+        href="#Portfolio"
+        id="navbar-portfolio"
+        class="nav-btn"
+        onclick="goto_Section('Portfolio')"
+        >Portfolio</a
+      >
+      <a
+        href="#Skills"
+        id="navbar-skills"
+        class="nav-btn"
+        onclick="goto_Section('Skills')"
+        >Skills</a
+      >
+      <a
+        href="#Resume"
+        id="navbar-resume"
+        class="nav-btn"
+        onclick="goto_Section('Resume')"
+        >Resume</a
+      >
+      <!-- Blog under maintenance -->
+      <!--<a href="./blog">Notes -></a>-->
+      <a
+        href="javascript:void(0);"
+        style="font-size: 15px"
+        class="icon"
+        onclick="navbarFunction()"
+        >&#9776;</a
+      >
+    </div>
 
-		<!-- Home Feature area -->
-		<div class="main-feature-area mini-about-area Home" id="mini-feature-area">
-			<div class="w-container">
-				<img class="profile-image" src="./img/closeup_me.jpg">
-				<h1>Clemence Goh</h1>
-				<div>Software Engineer  |  Web Developer</div>
-				<!--<div>Welcome to my portfolio</div>-->
-				<div>
-					<a class="social-button w-inline-block" href="https://github.com/clemencegoh" target="_blank">
-						<img src="./img/github_icon.png" width="29.8">
-					</a>
-					<a class="social-button w-inline-block" href="https://www.linkedin.com/in/clemencegoh/" target="_blank">
-						<img src="./img/linkedin_icon.png" width="36.4">
-					</a>
-					<a class="social-button w-inline-block" href="mailto:clemencegoh@gmail.com" target="_blank">
-						<img src="./img/mail_icon.png" width="31">
-					</a>
-				</div>
-			</div>
-			<div class="scroll-more">
-				<a href="#About" onclick="goto_Section('About')">
-					<img src="./img/SCROLL-DOWN-button.gif" style="max-width: 70px;">
-				</a>
-			</div>
-		</div>
+    <!-- Home Feature area -->
+    <div class="main-feature-area mini-about-area Home" id="mini-feature-area">
+      <div class="w-container">
+        <img class="profile-image" src="./img/closeup_me.jpg" />
+        <h1>Clemence Goh</h1>
+        <div>Software Engineer | Web Developer</div>
+        <!--<div>Welcome to my portfolio</div>-->
+        <div>
+          <a
+            class="social-button w-inline-block"
+            href="https://github.com/clemencegoh"
+            target="_blank"
+          >
+            <img src="./img/github_icon.png" width="29.8" />
+          </a>
+          <a
+            class="social-button w-inline-block"
+            href="https://www.linkedin.com/in/clemencegoh/"
+            target="_blank"
+          >
+            <img src="./img/linkedin_icon.png" width="36.4" />
+          </a>
+          <a
+            class="social-button w-inline-block"
+            href="mailto:clemencegoh@gmail.com"
+            target="_blank"
+          >
+            <img src="./img/mail_icon.png" width="31" />
+          </a>
+        </div>
+      </div>
+      <div class="scroll-more">
+        <a href="#About" onclick="goto_Section('About')">
+          <img src="./img/SCROLL-DOWN-button.gif" style="max-width: 70px" />
+        </a>
+      </div>
+    </div>
 
-		<!-- About area -->
-		<div class="main-feature-area About" id="main-feature">
-			<div class="introduction" id="introduction">
-				<p class="section-description">I've graduated from <b>SUTD</b>
-					with a degree in <b>Information Systems.</b></p>
-				<p class="section-description">My major is in <b>Artificial Intelligence</b> and <b>Security.</b></p>
-				<br>
-				<br>
-				<p class="section-description">I'm currently working as a full stack developer in DBS, Singapore.</p>
-			</div>
-			<div class="feature-pic" id="feature-pic">
-				<img class="main_profile_img" src="./img/cropped_clemence.JPG">
-			</div>
-		</div>
+    <!-- About area -->
+    <div class="main-feature-area About" id="main-feature">
+      <div class="introduction" id="introduction">
+        <p class="section-description">
+          I've graduated from <b>SUTD</b> with a degree in
+          <b>Information Systems.</b>
+        </p>
+        <p class="section-description">
+          My major is in <b>Artificial Intelligence</b> and <b>Security.</b>
+        </p>
+        <br />
+        <br />
+        <p class="section-description">
+          I'm currently working as a software engineer in Facebook, Singapore.
+        </p>
+      </div>
+      <div class="feature-pic" id="feature-pic">
+        <img class="main_profile_img" src="./img/cropped_clemence.JPG" />
+      </div>
+    </div>
 
-		<!-- Start portfolio-area Area -->
-		<div class="portfolio-area section-gap Portfolio" id="portfolio-area">
-			<div class="container">
-				<div class="row d-flex projects-header">
-					<div class="menu-content pb-70 col-lg-8">
-						<div class="title text-center">
-							<h1 class="mb-10">Projects</h1>
-							<p class="section-description">Collection of ongoing and completed projects</p>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Projects overall area -->
-				<div class="filters" id="project-filters">
-					<div class="filter-headings">
-						<span class="proj-filter-item active"
-						      data-filter="*">All</span>
-						<!--<span class="proj-filter-item"-->
-						      <!--data-filter=".app">App</span>-->
-						<span class="proj-filter-item"
-						      data-filter=".school">School</span>
-						<span class="proj-filter-item"
-						      data-filter=".website">Website</span>
-						<span class="proj-filter-item"
-						      data-filter=".software">Software</span>
-					</div>
-				</div>
-				
-				<!-- Projects area -->
-				<div class="filters-content">
-					<div class="row grid" id="projects_content">
-						<!-- Projects area -->
-						
-					</div>
-				</div>
-				
-			</div>
-		</div>
-		<!-- End portfolio-area Area -->
+    <!-- Start portfolio-area Area -->
+    <div class="portfolio-area section-gap Portfolio" id="portfolio-area">
+      <div class="container">
+        <div class="row d-flex projects-header">
+          <div class="menu-content pb-70 col-lg-8">
+            <div class="title text-center">
+              <h1 class="mb-10">Projects</h1>
+              <p class="section-description">
+                Collection of ongoing and completed projects
+              </p>
+            </div>
+          </div>
+        </div>
 
-		<!-- Start Skills area -->
-		<div class="Skills" id="Skills">
-			<h1>Skills</h1>
-			<p class="section-description">Collection of skills I have acquired throughout my journey</p>
-			<div class="skills-wrapper">
-				<div class="skills-area1" id="skills-area1">
+        <!-- Projects overall area -->
+        <div class="filters" id="project-filters">
+          <div class="filter-headings">
+            <span class="proj-filter-item active" data-filter="*">All</span>
+            <!--<span class="proj-filter-item"-->
+            <!--data-filter=".app">App</span>-->
+            <span class="proj-filter-item" data-filter=".school">School</span>
+            <span class="proj-filter-item" data-filter=".website">Website</span>
+            <span class="proj-filter-item" data-filter=".software"
+              >Software</span
+            >
+          </div>
+        </div>
 
-				</div>
+        <!-- Projects area -->
+        <div class="filters-content">
+          <div class="row grid" id="projects_content">
+            <!-- Projects area -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End portfolio-area Area -->
 
-				<div class="skills-area2" id="skills-area2">
+    <!-- Start Skills area -->
+    <div class="Skills" id="Skills">
+      <h1>Skills</h1>
+      <p class="section-description">
+        Collection of skills I have acquired throughout my journey
+      </p>
+      <div class="skills-wrapper">
+        <div class="skills-area1" id="skills-area1"></div>
 
-				</div>
-			</div>
-		</div>
-		<!-- End skills area -->
+        <div class="skills-area2" id="skills-area2"></div>
+      </div>
+    </div>
+    <!-- End skills area -->
 
-		<!-- Start Resume area -->
-		<div class="Resume" id="Resume">
-			<!--<h1 class="section-header">Resume</h1>-->
+    <!-- Start Resume area -->
+    <div class="Resume" id="Resume">
+      <!--<h1 class="section-header">Resume</h1>-->
 
-			<div>
-				<h2>Interested to find out more?</h2>
-				<p>
-					<a href="./files/Resume_March_2020.pdf">Preview</a>
-					 or
-					<a href="./files/Resume_March_2020.pdf" download>
-						Download
-					</a>
-					my resume!
-				</p>
-			</div>
-		</div>
-		<!-- End About area -->
+      <div>
+        <h2>Interested to find out more?</h2>
+        <p>
+          <a href="./resume">Preview</a>
+          or
+          <a href="./resume/Resume_Dec_2021.pdf" download> Download </a>
+          my resume!
+        </p>
+      </div>
+    </div>
+    <!-- End About area -->
 
-		<!-- Footer -->
-		<div class="Footer" id="Footer">
-
-		</div>
-
-	</body>
+    <!-- Footer -->
+    <div class="Footer" id="Footer"></div>
+  </body>
 </html>
