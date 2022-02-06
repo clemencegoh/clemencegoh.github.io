@@ -1,310 +1,126 @@
-body {
-  margin: 0;
+.light-mode {
+  --text-main-color: #142028;
+  --text-off-color: #818ea3;
+  --text-darker-color: #3d5170;
+
+  --main-bg-color: #fff;
+  --card-bg-color: #f4f5f6;
+  --card-secondary-bg-color: #e2e7ec;
+
+  --cta-color: #00b8d8;
+  --green: #17c671;
+  --red: #ea3943;
+  --success-color: #17c671;
+  --danger-color: #ea3943;
+  --warning-color: #f8b60f;
+}
+
+.dark-mode {
+  --text-main-color: #fff;
+  --text-off-color: #818ea3;
+  --text-darker-color: #cacedb;
+
+  --main-bg-color: #152028;
+  --card-bg-color: #142028;
+  --card-secondary-bg-color: #23323c;
+
+  --cta-color: #00b8d8;
+  --green: #17c671;
+  --red: #ea3943;
+  --success-color: #cdffe7;
+  --danger-color: #ffacb1;
+  --warning-color: #f8b60f;
+}
+
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.app-wrapper {
+  background-color: var(--main-bg-color);
+  color: var(--text-main-color);
+}
+
 .topnav {
-  overflow: hidden;
-  background-color: #4682b4;
+  display: flex;
+  position: relative;
+  background-color: var(--card-bg-color);
+  justify-content: space-between;
 }
 
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.navactive {
-  background-color: black;
-  color: white;
-}
-
-.topnav .icon {
-  display: none;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 17px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.topnav a:hover,
-.dropdown:hover .dropbtn {
-  background-color: #555;
-  color: white;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child),
-  .dropdown .dropbtn {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .topnav.responsive .dropdown {
-    float: none;
-  }
-  .topnav.responsive .dropdown-content {
-    position: absolute;
-  }
-  .topnav.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-}
-
-.active {
-  color: white;
-  background: black;
-}
-.About {
+.nav-item {
   display: flex;
   justify-content: center;
-  justify-items: center;
   align-items: center;
-  align-content: center;
-  flex-wrap: wrap;
-  min-height: 100vh;
-}
-
-.main_profile_img {
-  max-width: 100%;
-}
-
-.scroll-more {
-  position: absolute;
-  bottom: 10vh;
-  right: 50%;
-  left: 50%;
-  display: flex;
-  justify-content: center;
-}
-
-.introduction {
-  margin: auto;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  padding: 4rem 0;
-}
-
-.feature-pic {
-  margin: auto;
-}
-
-.projects-header {
-  padding: 4rem 1rem 0 1rem;
-  justify-content: center;
-}
-
-.filters {
-  padding-bottom: 20px;
-}
-
-.filter-headings {
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-}
-
-.proj-filter-item {
-  flex: 1;
-  text-align: center;
-}
-
-.proj-filter-item:hover {
-  cursor: pointer;
-  background-color: darkslategray;
-  color: white;
-}
-
-.portfolio-area {
-  background: #5d6d80;
-}
-
-.cat {
-  text-align: center;
-}
-
-.proj-title {
-  text-align: center;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1; /* Always front */
-}
-
-.Home {
-  margin: auto;
-  padding: 11rem 0;
-  height: 100vh;
-}
-
-.w-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.profile-image {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  height: 18vh;
-}
-
-.Portfolio {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.single-portfolio {
-  padding: 1rem;
-}
-
-.section-description {
-  text-align: center;
-}
-
-.Skills {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: auto;
-  min-height: 100vh;
-  padding: 4rem 1rem;
-}
-
-.skill-container {
-  width: 100%;
-  background-color: #ddd;
-}
-
-.skills-wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
-.skills-area1,
-.skills-area2 {
-  flex: 1;
-  padding: 0 1rem;
-}
-
-.single-skill-container {
-  padding: 1rem 0 1rem 0;
-  text-align: center;
-}
-
-.skill-desc {
-  margin: 0;
+  padding: 1em;
   font-weight: bold;
 }
 
-.skill-about {
-  margin: 0;
+.nav-item:hover {
+  background-color: var(--card-secondary-bg-color);
 }
 
-.single-skill {
-  text-align: left;
-  padding: 10px;
-  color: black;
+.active-nav {
+  background-color: var(--card-secondary-bg-color);
 }
 
-.Advanced {
-  width: 80%;
-  background-color: #4caf50;
+.mobile-only {
+  display: none;
 }
 
-.Intermediate {
-  width: 60%;
-  background-color: yellowgreen;
+.w-5 {
+  width: 1.25rem;
+}
+.h-5 {
+  height: 1.25rem;
 }
 
-.Novice {
-  width: 40%;
-  background-color: darkorange;
+.placeholder {
+  height: 100vh;
 }
 
-.Basic {
-  width: 20%;
-  background-color: lightcoral;
+.theme-toggle-button {
+  margin: 0 0.5rem;
 }
 
-.Resume {
-  text-align: center;
-  min-height: 40vh;
+.button-1 {
   padding: 1rem;
-  background: linear-gradient(white, #c4dcff);
+  cursor: pointer;
+  border: none;
+  background: inherit;
+  color: var(--text-main-color);
 }
 
-.Footer {
-  height: 10vh;
-  background-color: #c4dcff;
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  .mobile-none {
+    display: none;
+  }
+
+  .mobile-only {
+    display: flex;
+  }
+
+  .topnav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
 }
